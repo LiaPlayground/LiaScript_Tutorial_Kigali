@@ -1,24 +1,37 @@
+<!--
+author:   Your Name
+
+email:    your@mail.org
+
+version:  0.0.1
+
+language: en
+
+narrator: US English Female
+
+comment:  Full day workshop at eLearning Africa 2022.
+
+-->
+
 # LiaScript Tutorial: eLearing Africa 2022
 
-
+![LiaScript on Nokia](images/nokia.jpeg)
 ## Setup
 
 1. Create an account at: https://github.com
-2. Download the Editor at: https://atom.io
-3. To install the Plugins, hit <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> and type "settings".
+2. Download the Editor at: https://code.visualstudio.com/Download
+3. Open the Marketplace and search for liascript:
 
-   Goto "install" and search the following plugins:
+   search and "install" the following plugins:
 
    1. liascript-preview
    2. liascript-snippets
-   3. language-markdown
-   4. markdown-table-editor
 
 > **important keyboard short-cuts**
 >
 > * Fuzzy Search: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>
 > * Save: <kbd>Shift</kbd> + <kbd>S</kbd>
-> * Move lines: <kbd>Ctrl</kbd> + <kbd>ᐃ/ᐁ</kbd>
+> * Move lines: <kbd>Alt</kbd> + <kbd>ᐃ/ᐁ</kbd>
 > * __LiaScript__:
 >
 >   - Snippets: <kbd>l</kbd> <kbd>i</kbd> <kbd>a</kbd>
@@ -100,7 +113,7 @@ Bullet points in an unordered list indicated by starting *, -, or + and require 
 
 * A list can also contain further lists:
 
-  + These do not necessarly have to start with an asterisks
+  + These do not necessarily have to start with an asterisks
   + But it is good practice if you use different symbols for different nesting
 
 ------------------------
@@ -120,15 +133,15 @@ Markdown has also support for numbered lists, which can be used in combination w
 
 Task:
 
-Write some usefull comments on the usage of numbered lists
+Write some useful comments on the usage of numbered lists
 and create an example, where you combine numbered and not numbered bullet points.
 
-### Formating
+### Formatting
 
 Highlighting peaces of the text with only a text-editor might seem tricky at first.
 But, you can use different elements to tag your content.
 
-* `code`: this type is required if you want to highlight elements as code, the markdown interpeter will leave everything as it is (including Markdown syntax)
+* `code`: this type is required if you want to highlight elements as code, the markdown interpreter will leave everything as it is (including Markdown syntax)
 
 * italic: surround the word or the text with either `*` or  `_`.
 
@@ -145,7 +158,7 @@ But, you can use different elements to tag your content.
 
 * crossed out and underlined: follow the markdown idea ;-)
 
-* superscript: it is not Markdown but LiaScript, but you can use `^` to surround supperscript elements
+* superscript: it is not Markdown but LiaScript, but you can use `^` to surround superscript elements
 
 ### Block-quotes
 
@@ -158,7 +171,7 @@ But, you can use different elements to tag your content.
 
 Question: Can blockquotes be nested?
 
-### Links & Refernces
+### Links & References
 
 Nothing within the Internet works without links. You can use them everywhere within the document, but Markdown has also support for named and internal links.
 
@@ -184,7 +197,7 @@ Images are a special case of links, which you want to embed into your document a
 
 > **Task:**  Change the link below to an image.
 >
-> What happend to the name of this link?
+> What happened to the name of this link?
 > Try to change the image URL and see the result.
 >
 > __Every part is important__
@@ -270,9 +283,6 @@ It allows to embed:
 * online programming
 * and more ...
 
-
-> **Aufgabe:** Stellen Sie sicher, dass Sie sich für die nächsten Schritte im Präsentations-Modus und stellen sie die Sprachausgabe ein.
-
 ### Adding Meta-Information
 
 If you go to the very first line of your course, you will see something like a HTML comment.
@@ -313,7 +323,6 @@ Further Settings:
 
 * narrator: defines the default voice, type "voice" to get a preview onto all supported voices.
 
-
 ### Multimedia
 
 From links to ! images --> ? audio --> !? video --> ?? anything else:
@@ -321,7 +330,6 @@ From links to ! images --> ? audio --> !? video --> ?? anything else:
 * Audio: `?[alt-info](url)`
 * Video: `!?[alt-info](url)`
 * Anything else: `??[alt-info](url)`
-
 
 > Task1: Embed the links below as audio content
 
@@ -356,6 +364,7 @@ From links to ! images --> ? audio --> !? video --> ?? anything else:
 > **Task1:** Make a gallery
 >
 > **Task2:** Add some movies and other elements to the gallery.
+
 ### Animations
 
 > Your user can decide, which presentation mode is used.
@@ -378,6 +387,7 @@ And disappear at step 2.
 
 > As the the last and final quote.
 > I wanted to be displayed at the very end.
+
 #### Micro-Animations
 
 You can also "inline" animations, simply by unpacking the curly braces:
@@ -406,7 +416,6 @@ With this notation `--{{1}}--` you can add some more explanation that will be sp
 > 
 > Try to add some examples of your mother tongue.
 
-
 The entire ***Markdown*** paragraph right below the effect definition in double minus notation is sent to responsivevoice to speak the text out loud. If you click on the ear button at the navigation panel, then this paragraph gets rendered at the place where it is defined.
 
 Der Ganze Satz sollte deutsch ausgesprochen werden!
@@ -423,17 +432,17 @@ It is proven that students perform better, when they have the possibility to ref
 Quizzes are an ideal way to check the understanding.
 LiaScript currently has support for four different types of quizzes, with the possibility to tweak them.
 
-#### Textinput
+#### Text-input
 
 A text input is simply a filed that follows after your question.
 The solution is placed within a stylized input field.
-In LiaScript quizzes are always associated with double backets.
+In LiaScript quizzes are always associated with double brackets.
 
     `[[Solution]]`
 
 > **Task:** Remove the backtics, change the solution and add your questions.
-#### Single Choice
 
+#### Single Choice
 
 If you want to create a single choice quiz, for which commonly radio-buttons are used, would you use a similar syntax?
 
@@ -447,7 +456,6 @@ If you want to create a single choice quiz, for which commonly radio-buttons are
 
 If we stick to this metaphor, checkboxes can be defined with the following syntax:
 
-
     [[X]] <-- right
     [[ ]] wrong
     [[ ]] <-- right
@@ -455,6 +463,7 @@ If we stick to this metaphor, checkboxes can be defined with the following synta
 
 > **Task:** Adapt the quiz above, such that the solution represents the defined options.
 > Add and remove some Xs, see what happens when no X is defined.
+
 #### Matrix
 
 A matrix is basically a 2D representation multiple horizontal vectors.
@@ -471,6 +480,7 @@ The first row only defines the head of this quiz type.
 > 1. Hints
 > 2. Solutions
 > 3. Scripting
+
 ##### Hints
 
 We stuck to the double brackets notation and simply include `?` to mark a hint.
@@ -481,7 +491,6 @@ What is the name of the Markdown dialect we are using?
     [[LiaScript]]
     [[?]] You have to use the correct writing
     [[?]] The solutions starts with Lia.....
-
 
 > **Task:** Try to add some hints to other quizzes. 
 
@@ -614,7 +623,7 @@ The benefit is, that you do not have to switch to another external tool and ever
 Characters represent colors, upper and lowercase defines the size of the line.
 
 
-                 Combining dots and polylines
+                 Combining dots and poly-lines
     1.9 |
         |     DOTS
       y |                                    *
@@ -648,7 +657,7 @@ For more information and inspiration, checkout the following link:
 
 https://github.com/andre-dietrich/elm-svgbob
 
-### Formating
+### Formatting
 
 <!-- style="color: red; font-size: 4rem; max-width: 400px" -->
 Blocs<!-- style="background: green" --> and single elements<!-- style="border: 3px dashed blue" --> can be styled differently!
@@ -681,9 +690,10 @@ Blocs<!-- style="background: green" --> and single elements<!-- style="border: 3
 Markdown-tables can also be interpreted as data sets and thus be presented as diagrams, if possible.
 LiaScript tries to analyze the structure of your data in order to identify an optimal visualization.
 Besides, you can also define the visualization you want to use.
-#### Linien-Diagramme
 
-Oberhalb der Tabelle in LiaScript befindet sich ein kleines Diagramm-Symbol, das andeutet, dass Linien-Diagramme für die Darstellung angenommen werden. Wenn Sie darauf klicken, dann wechselt die Darstellung auf das entsprechende Diagramm.
+#### Line-plot
+
+Above the table is a little button, that switches to the diagram view.
 
 |   x |  y1 |  y2 |  y3 |
 | ---:| ---:| ---:| ---:|
@@ -694,9 +704,12 @@ Oberhalb der Tabelle in LiaScript befindet sich ein kleines Diagramm-Symbol, das
 |   5 |   5 |  25 |  15 |
 |   6 |   6 |  36 |  15 |
 
-#### Balken-Diagramme
+> **Task:** Add a new line with an x value, that is already within the table.
 
-In den meisten Diagrammen wird die erste Spalte als x-Achse gesehen, sollte diese keine Zahlen enthalten, jedoch über „Kategorien“ verfügen, dann wird eine andere Darstellungsform gewählt, im unteren Beispiel handelt es sich um ein Balkendiagramm.
+#### Bar-chart
+
+In most cases the first column represents the x-values or in this case the main categories.
+
 
 | Animal          | weight in kg | Lifespan years | Mitogen |
 | --------------- | ------------:| --------------:| -------:|
@@ -706,18 +719,20 @@ In den meisten Diagrammen wird die erste Spalte als x-Achse gesehen, sollte dies
 | Sheep           |        90 kg |             12 |      95 |
 | Human           |        68 kg |             70 |      10 |
 
-> **Aufgabe:** Sortieren Sie die Spalten in der Tabellen-Darstellung und schauen Sie, welchen Effekt das auf das Bild hat.
+> **Task:** Sort the columns and inspect the resulting presentation.
+>
+> **Task:** replace the 90 and 68 kg by 0.9 and 0.68, what happens within the diagram and why?
 
+#### Pie-charts
 
-#### Torten-Diagramme
-
-Eine Tabelle mit nur einer Zeile wird als Torten-Diagramm dargestellt.
+What is a table with only one category?
 
 | Music-Style 1994 | Classic | Country | Reggae | Hip-Hop | Hard-Rock | Samba |
 |:---------------- | -------:| -------:| ------:| -------:| ---------:| -----:|
 | Student rating   |      50 |      50 |    100 |     200 |       350 |   250 |
 
-Das Gleiche gilt für die untere Tabelle, mit dem Kommando `<!-- data-transpose -->` wird nur gesagt, das die Daten für die Darstellung transponiert werden sollen, um so eine bessere Lesbarkeit der Tabelle zu geben. Im Weiteren zeigt die Tabelle, wie Mikro-Animationen eingesetzt werden können, um die Darstellung zu verändern.
+To simplify the defintion, you can also use the following table and use the block-comment `<!-- data-transpose -->`, which only performs a matrix transpose before analyzing the table.
+You can also use micro-animations to present different tables.
 
 <!-- data-transpose -->
 | Music-Style {0-1}{1994} {1}{2014} |      Student rating |
@@ -729,56 +744,39 @@ Das Gleiche gilt für die untere Tabelle, mit dem Kommando `<!-- data-transpose 
 | Hard-Rock                         | {0-1}{350} {1}{400} |
 | Samba                             | {0-1}{250} {1}{230} |
 
-> **Aufgabe:** Schalten Sie im Präsentationsmodus weiter und beobachten Sie die unterschiedliche Darstellung in der Tabelle und im Diagramm.
+> **Aufgabe:** Switch to presentation mode and check try out the different animations in table and diagram view mode.
 
-#### Mehr Diagramme
+#### More diagrams
 
-LiaScript unterstützt noch mehr Diagramm-Typen unter dem folgenden Link finden Sie noch weitere Nutzungsmöglichkeiten:
+Have a look on all supported diagram types and tweaks.
 
 <preview-lia
 src="https://raw.githubusercontent.com/liaScript/docs/master/README.md"
-link="https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#67">
+link="https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#fun-with-tables">
 </preview-lia>
 
 
-### Formeln
-
-LiaScript, wie auch mehrere andere Markdown-Dialekte, unterstützt die Nutzung von Formeln, hierbei wird auf die Möglichkeiten von KaTeX zurückgegriffen:
-
-https://katex.org/docs/supported.html
-
-Die folgende Darstellung zeigt nur die zwei Nutzungsmöglichkeiten, wobei die Formeldefinition entweder durch ein einfaches `$`-Zeichen oder innerhalb doppelter `$$`-Zeichen markiert wird:
-
-* Im $ f(a,b,c) = (a^2+b^2+c^2)^3 $ Text
-* Als eigenständiger Block:
-
-  $$
-   \sum_{i=1}^\infty\frac{1}{n^2}
-        =\frac{\pi^2}{6}
-  $$
-
-> **Aufgabe:** Lassen Sie im folgen Text  `n= 2 \pi f` als Formel erscheinen.
-
-Die Drehfrequenz wird wie folgt berechnet:  n = 2 \pi f
+### Coding
 
 
-### Ausführbarer Code
-
-Code kann direkt ausgeführt werden, indem an eine Markdown Code-Block ein `<script>...</script>` angehängt wird, das definiert, wie mit den Eingaben verfahren werden soll. Handelt es sich wie im unteren Beispiel um JavaScript, dann genügt es `@input` im script-tag einzufügen, dieser Inhalt wird dann bei jeder Ausführung mit den aktuellen Inhalten des Editors überschrieben (substituiert).
+JavaScript code can be directly made executable and editable by adding a script-tag `<script>...</script>`.
+It tells LiaScript how to deal with the content.
+`@input` is replaced by the code.
 
 ``` js
-console.warn("Hallo Welt");
+console.warn("Hello World");
 
 33*55;
 ```
 <script>@input</script>
 
-> **Aufgabe:** Verändern Sie das obige Programm in der LiaScript Darstellung und führen Sie es aus. Springen Sie mit den „Pfeiltasten“ in ihren Versionen vor und zurück und verändern auch diese Inhalte. Beobachten Sie wie neue Versionen angehängt werden.
+> **Task:** Edit some of the code, and jump to different versions with the buttons below.
+> Jump to an older version, change the content and look at the versioning number.
 
+#### Project
 
-#### Projekte
-
-Sie können auch komplizierter Projekte anlegen, indem Sie mehrere Markdown Code-Blöcke direkt aneinander hängen. Zur Unterscheidung eignen sich hier auch „Dateinamen“ die mit einem vorangestellten `+` oder `-` zeigen, ob die Datei aufgeklappt, bzw. zugeklappt dargestellt werden soll. Das sScript-tag umfasst nun ein etwas kompliziertes Programm, das ausgeführt werden soll, wobei `@input(n)` angibt, welcher Inhalt wo substituiert werden soll.
+A project can be seen as a collection of code-blocks and a script, which defines how to deal with the different inputs.
+Additionally you can add titles to your files.
 
 ``` js     -EvalScript.js
 let who = data.first_name + " " + data.last_name;
@@ -803,191 +801,115 @@ else {
   eval(`@input(0)`);
 </script>
 
-> **Aufgabe:** Ersetzen Sie in der Datei "Data.json" den Eintrag `"online" : true` durch `"online" : false`.
+### Extensions
 
+LiaScript allows to add external functionality by using macros.
+Macros are defined within the main-comment at the head of your document.
+Macros provide basically only a substitution and have to be called from the course with a starting `@`.
 
-### Macros & Bibliotheken
-
-LiaScript bietet die Möglichkeit zusätzliche Funktionalität mithilfe von Macros zu definieren. Diese werden, kurz gesagt, mit einem vorangestellten `@` markiert. Einige davon haben sie schon gesehen, wie `@input`. Andere vielleicht schon selber definiert:
 
 * `@author`
 * `@email`
 * `@comment`
 
-Diese werden im Kopf der eines jeden Dokumentes definiert und können überall im Kurs verwendet werden. Diese können auch parametrisiert werden, w. z. B. das `@input` Macro. Was jedoch allen gemein ist, ist das hier eine einfache Textersetzung vorgenommen wird. Damit wird das mehrfache Schreiben komplizierter HTML- / CSS- / JavaScript- / Markdown-Ausdrücke automatisiert.
+A macro can contain Markdown, HTML, CSS or JavaScript.
 
-> **Aufgabe:** Entfernen Sie die Backticks in der oberen Liste und beobachten Sie was passiert. Vielleicht verändern sie auch nochmal den Autor oder Ihre E-mail.
+> **Task:** Remove the backtics within the list and check the result.
 
-#### Import
+#### Where to find extension
 
-Sie können die Macros anderer Kurse auch in ihren eigenen Kurs importieren, dazu müssen sie nur jeweiligen Kurse mittels `import: url` eingebunden werden. Dieser Kurs importiert schon einige „Templates“, die wir auf den folgenden kurz nutzen werden.
+A collection of macros can be found here:
 
-``` md
+https://github.com/topics/liascript-template
+
+every document can be seen as a library, which can be imported into your course via the macro `import: URL`
+
+---
+
+example from [AVR8js](https://github.com/LiaTemplates/AVR8js):
+
+```` markdown
 <!--
-author:   Your Name
-email:    your@mail.org
-
-...
-@btn:     <span class="lia-icon"><lia-keep>@0</lia-keep></span>
-
-import:   https://github.com/LiaTemplates/KekuleJS
-
+import: https://raw.githubusercontent.com/liaTemplates/AVR8js/main/README.md
 -->
-```
 
-Eine kleine Sammlung verschiedener Kurse finden Sie auch unter:
-
-https://github.com/LiaTemplates
-
-## 🧪🧑‍🔬 Chemie
-
-Das folgende Template bindet zwei Funktionen von KekuleJS ein, die hier definiert sind:
-
-https://github.com/LiaTemplates/KekuleJS
-
-* `@Kekule.molecule2d`
-* `@Kekule.molecule3d`
-
-``` xml @Kekule.molecule2d
-<cml xmlns="http://www.xml-cml.org/schema">
-  <molecule>
-    <atomArray>
-      <atom id="a1588768090561" elementType="C" x2="0.4125" y2="0.6348"/>
-      <atom id="a1588768090562" elementType="C" x2="-0.4125" y2="0.6348"/>
-      <atom id="a1588768090563" elementType="C" x2="-0.6674" y2="-0.1498"/>
-      <atom id="a1588768090564" elementType="N" x2="0" y2="-0.6348"/>
-      <atom id="a1588768090565" elementType="C" x2="0.6674" y2="-0.1498"/>
-    </atomArray>
-    <bondArray>
-      <bond id="b1588768090566" order="S" atomRefs2="a1588768090561 a1588768090562"/>
-      <bond id="b1588768090567" order="D" atomRefs2="a1588768090562 a1588768090563"/>
-      <bond id="b1588768090568" order="S" atomRefs2="a1588768090563 a1588768090564"/>
-      <bond id="b1588768090569" order="S" atomRefs2="a1588768090564 a1588768090565"/>
-      <bond id="b1588768090570" order="D" atomRefs2="a1588768090565 a1588768090561"/>
-    </bondArray>
-  </molecule>
-</cml>
-```
-
-> **Aufgabe:** Ersetzen Sie im oberen Code-Block das Macro `@Kekule.molecule2d` durch `@Kekule.molecule3d` und beobachten Sie, was passiert.
-
-## 🔧🧑🏽‍🔧 Maschinenbau
-
-https://github.com/LiaTemplates/mec2
-
-``` json @mec2
-{
-  "id":"chaos-pendulums",
-  "gravity":true,
-  "nodes": [
-    { "id":"A0","x":200,"y":400,"base":true },
-    { "id":"A1","x":280,"y":480,"m":2 },
-    { "id":"B1","x":279,"y":481,"m":2 },
-    { "id":"C1","x":278,"y":482,"m":2 },
-    { "id":"D1","x":277,"y":483,"m":2 },
-    { "id":"A2","x":360,"y":560,"m":3 },
-    { "id":"B2","x":359,"y":561,"m":3 },
-    { "id":"C2","x":358,"y":562,"m":3 },
-    { "id":"D2","x":357,"y":563,"m":3 },
-    { "id":"A3","x":440,"y":640,"m":4.7 },
-    { "id":"B3","x":439,"y":641,"m":4.7 },
-    { "id":"C3","x":438,"y":642,"m":4.7 },
-    { "id":"D3","x":437,"y":643,"m":4.7 }
-  ],
-  "constraints": [
-    { "id":"a1","p1":"A0","p2":"A1","len":{ "type":"const" } },
-    { "id":"a2","p1":"A1","p2":"A2","len":{ "type":"const" } },
-    { "id":"a3","p1":"A2","p2":"A3","len":{ "type":"const" } },
-    { "id":"b1","p1":"A0","p2":"B1","len":{ "type":"const" } },
-    { "id":"b2","p1":"B1","p2":"B2","len":{ "type":"const" } },
-    { "id":"b3","p1":"B2","p2":"B3","len":{ "type":"const" } },
-    { "id":"c1","p1":"A0","p2":"C1","len":{ "type":"const" } },
-    { "id":"c2","p1":"C1","p2":"C2","len":{ "type":"const" } },
-    { "id":"c3","p1":"C2","p2":"C3","len":{ "type":"const" } },
-    { "id":"d1","p1":"A0","p2":"D1","len":{ "type":"const" } },
-    { "id":"d2","p1":"D1","p2":"D2","len":{ "type":"const" } },
-    { "id":"d3","p1":"D2","p2":"D3","len":{ "type":"const" } }
-  ],
-  "views": [
-    { "show":"pos","of":"A3","as":"trace","id":"view1","stroke":"rgba(255,0,0,.5)" },
-    { "show":"pos","of":"B3","as":"trace","id":"view2","stroke":"rgba(0,255,0,.5)" },
-    { "show":"pos","of":"C3","as":"trace","id":"view3","stroke":"rgba(255,255,0,.5)" },
-    { "show":"pos","of":"D3","as":"trace","id":"view4","stroke":"rgba(255,0,255,.5)" }
-  ]
-}
-```
-
-
-
-## 📐👩‍🏫 Mathematik
-
-https://github.com/LiaTemplates/Algebrite
-
-``` m
-(3 * x - 5x)^3 * (x + x)
-
-60!
-```
-@Algebrite.eval
-
-``` m
-f=sin(t)^4-2*cos(t/2)^3*sin(t)
-
-f=circexp(f)
-
-defint(f,t,0,2*pi)
-```
-@Algebrite.eval
-
-## 🩺🧑🏼‍⚕️ Medizin
-
-https://github.com/LiaTemplates/VTK
-
-Das laden des medizinischen Datensatzes kann etwas Zeit in Anspruch nehmen
-
-@VTK.load(https://data.kitware.com/api/v1/file/58e665158d777f16d095fc2e/download)
-
-
-## 🖼👩‍💻Visualisierung
+<div id="example">
+<wokwi-led color="red"   pin="13" label="13"></wokwi-led>
+<wokwi-led color="green" pin="12" label="12"></wokwi-led>
+<wokwi-led color="blue"  pin="11" label="11"></wokwi-led>
+<wokwi-led color="blue"  pin="10" label="10"></wokwi-led>
+<span id="simulation-time"></span>
+</div>
 
 ``` cpp
-// Global variables
-float radius = 50.0;
-int X, Y;
-int nX, nY;
-int delay = 16;
-
-// Setup the Processing Canvas
-void setup(){
-  size( 400, 200 );
-  strokeWeight( 10 );
-  frameRate( 15 );
-  X = width / 2;
-  Y = height / 2;
-  nX = X;
-  nY = Y;
+byte leds[] = {13, 12, 11, 10};
+void setup() {
+  Serial.begin(115200);
+  for (byte i = 0; i < sizeof(leds); i++) {
+    pinMode(leds[i], OUTPUT);
+  }
 }
 
-// Main draw loop
-void draw(){
-  radius = radius + sin( frameCount / 4 );
-  // Track circle to new destination
-  X+=(nX-X)/delay;
-  Y+=(nY-Y)/delay;
-  // Fill canvas grey
-  background( 100 );
-  // Set fill-color to blue
-  fill( 0, 121, 184 );
-  // Set stroke-color white
-  stroke(255);
-  // Draw circle
-  ellipse( X, Y, radius, radius );
-}
-
-// Set circle's next destination
-void mouseMoved(){
-  nX = mouseX;
-  nY = mouseY;
+int i = 0;
+void loop() {
+  Serial.print("LED: ");
+  Serial.println(i);
+  digitalWrite(leds[i], HIGH);
+  delay(250);
+  digitalWrite(leds[i], LOW);
+  i = (i + 1) % sizeof(leds);
 }
 ```
-@Processing.eval
+@AVR8js.sketch(example)
+````
+
+> **Task:** import the source from the example to your document and remove the outer backtics.
+
+## Classrooms
+
+LiaScript implements some kind of private classrooms for small groups.
+
+Classrooms synchronize quizzes and surveys.
+
+Surveys are basically quizzes without solutions but with options.
+
+---
+
+What features do you like about LiaScript?
+
+   [[TTS]] The text to speech output
+   [[Animations]] PowerPoint like animations
+   [[Multimedia]] Easy integration of multimedia content
+   [[ASCII]] Drawing with characters
+   [[Coding]] Inline coding
+   [[Openness]] The free sharing
+
+Will you use LiaScript to create courses?
+
+    [(yes)] Yes of course
+    [(no)] No absolutely not
+    [(maybe)] Maybe, don't know atm
+
+Can you give us some reactions, simply add comma separated phrases:
+
+    [[___]]
+
+---
+
+Give us some live feedback.
+
+    [[___ ___ ___]]
+
+## Exporting your course to
+
+Download and install nodejs and npm:
+
+https://nodejs.org/en/download/
+
+Install the LiaScript exporter via npm in your terminal:
+
+`npm install -g @liascript/devserver`
+
+More information about the usage can be found here:
+
+https://www.npmjs.com/package/@liascript/devserver
