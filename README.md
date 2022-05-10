@@ -434,66 +434,78 @@ In LiaScript quizzes are always associated with double backets.
 > **Task:** Remove the backtics, change the solution and add your questions.
 #### Single Choice
 
-Es werden mehrere Lösungsmöglichkeiten vorgegeben, üblicherweise werden solche Aufgaben im Browser über sogenannte Radio-Buttons dargestellt. In LiaScript wird diese Notation einfach übernommen und mithilfe von runden Klammern innerhalb der eckigen angezeigt und das X markiert die einzig richtige Lösung:
 
-    [( )] Option 1
-    [(X)] <-- **Die richtige Auswahlmöglichkeit**
-    [( )] Eine weitere falsche Option
+If you want to create a single choice quiz, for which commonly radio-buttons are used, would you use a similar syntax?
 
-> **Aufgabe:** Fügen Sie noch weitere Optionen ein, bzw. verändern Sie die Position der Lösung.
+    [( )] No
+    [(X)] <-- **YES of course**
+    [( )] I would use H5P
+
+> **Task:** Add some more options and try out, what happens, when multiple `X` are used.
 
 #### Multiple Choice
 
-Es werden mehrere Lösungsmöglichkeiten vorgegeben, von denen auch mehrere auswählbar sind. Diese Aufgaben werden zumeist durch sogenannte Checkboxen abgebildet, die in LiaScript wie folgt abgebildet werden:
+If we stick to this metaphor, checkboxes can be defined with the following syntax:
 
 
-    [[X]] **<-- richtig**
-    [[ ]] falsch
-    [[ ]] **<-- richtig**
-    [[X]] falsch
+    [[X]] <-- right
+    [[ ]] wrong
+    [[ ]] <-- right
+    [[X]] wrong
 
-> **Aufgabe:** Passen Sie das obere Quiz an, damit die Lösung den Vorgaben entspricht. Fügen Sie ggf. weitere Optionen zu, bzw. entfernen Sie alle bis auf eine.
-
+> **Task:** Adapt the quiz above, such that the solution represents the defined options.
+> Add and remove some Xs, see what happens when no X is defined.
 #### Matrix
 
-Bei dieser Darstellung werden die beiden zuvor vorgestellten Quizze in einer zwei-dimensionalen Matrix kombiniert. Die oberste Zeile definiert die möglichen Optionen, während die Zeilen Multiple und Single Choice Quizze kombinieren.
+A matrix is basically a 2D representation multiple horizontal vectors.
+The first row only defines the head of this quiz type.
 
     [ [head1] [ ;-) ] [ Option3 ] ]
     [   ( )     ( )       (X)     ]  <-- Single Choice
     [   [ ]     [X]       [X]     ]  <-- Multiple Choice
 
-#### Weitere Optionen
+#### Tweaks
 
-Zu Quizzen können verschiedene weitere Hilfen hinzugefügt werden, sowie erweiterte Auflösungen. Die vorgestellten Anpassungen können allen Quiz-Typen angefügt werden…
+> You can use multiple tweaks when dealing with quizzes.
+>
+> 1. Hints
+> 2. Solutions
+> 3. Scripting
+##### Hints
 
-##### Hilfen
+We stuck to the double brackets notation and simply include `?` to mark a hint.
+Add as much hints to every quiz type.
 
-Gegebenenfalls kann es notwendig sein, dass Hilfen/Tipps zu den Quizzen hinzugefügt werden sollen, sodass der Nutzer selber entscheiden kann, sich eine Hilfe geben zu lassen, bevor er/sie auf den Auflöse-Button klickt.
-
-Wie heißt der Markdown Dialekt, der hier genutzt wird:
-
-    [[LiaScript]]
-    [[?]] Bitte achten Sie auf die korrekte Schreibweise
-    [[?]] Die Lösung beginnt mit Lia.....
-
-
-> **Aufgabe:** Fügen Sie noch einen weiteren Hinweis hinzu. Wenn sie wollen, dann können Sie auch Hinweise an die vorhergehenden Quizze anfügen.
-
-##### Auflösungen
-
-Mithilfe von zwei Linienzügen, die durch mindestens drei aufeinander folgenden `***` definiert werden, können erweiterte Auflösungen definiert werden, die mehrere Markdown-Blöcke enthalten können. Diese werden nur gezeigt, falls der Nutzer die richtige Lösung gegeben hat, bzw. auf Auflösungen klickt.
+What is the name of the Markdown dialect we are using?
 
     [[LiaScript]]
-    [[?]] Bitte achten Sie auf die korrekte Schreibweise
-    [[?]] Die Lösung beginnt mit Lia.....
+    [[?]] You have to use the correct writing
+    [[?]] The solutions starts with Lia.....
+
+
+> **Task:** Try to add some hints to other quizzes. 
+
+##### Solutions
+
+With the help of two horizontal lines, based on asterisk you can define a block that may contain a couple of different Markdown-blocks.
+Solutions are only revealed, when the quiz is solved or when the user gives up.
+
+---
+
+What is the name of the Markdown dialect we are using?
+
+    [[LiaScript]]
+    [[?]] You have to use the correct writing
+    [[?]] The solutions starts with Lia.....
     **************************************************
-    LiaScript ist eine interaktive Erweiterung zu
-    Markdown, zur Entwicklung interaktiver und freier
-    Lehrinhalte. Mehr Informationen finden Sie unter:
+    
+    LiaScript is an interactive extension to Markdown,
+    which allows to develop free and open online course.
+    More information can be found at:
 
     https://LiaScript.github.io
 
-                    Nur ein weiteres Diagramm
+                    Just a diagram
     1.9 |
         |                 ***
       y |               *     *
@@ -509,84 +521,166 @@ Mithilfe von zwei Linienzügen, die durch mindestens drei aufeinander folgenden 
     **************************************************
 
 
+##### Controlling the solutions
+
+You can associate javascript to your quiz, which controls how to deal with the input and returns either `true` or `false`.
+
+    [[LiaScript]]
+    [[?]] You have to use the correct writing
+    [[?]] The solutions starts with Lia.....
+    <script>
+      // @input gets replaced by the current quiz input.
+      // In case of a:
+      // * text input -> string, that has to be encapsulated with (")
+      // * single choice -> int (-1, if nothing is selected)
+      // * multiple choice -> array int (0 unchecked, 1 checked)
+      "@input".toLowerCase().trim() == "liascript"
+    </script>
+
+> More information about quizzes and how they can be used in LiaScript can be found at the
+> [LiaScript-documentation](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#60).
 
 
+### Formulas
 
-#### Bedingte Ausgaben
+LiaScript uses [KaTeX](https://katex.org) to generate formulas.
+To define a formula environment, the Latex formulas have to be surrounded by `$` signs.
+Simply think of currency and math ;-)
 
-Für das Erlernen einer Sprache, bzw. um verschiedene Aufgabenstellungen zu vertonen, kann es hilfreich sein einen Abspiel-Button für verschieden Segmente zu haben. Dieser kann als Kombination zwischen Effekt und Sprache gesehen werden. Auch hierfür wird die doppelt geschweifte Klammer-Notation genutzt, nur das diese um einen zusätzlichen Play-Button erweitert werden:
+See all usable functions: https://katex.org/docs/supported.html
 
-* Block: `{{|>}}` oder `{{!>}}`
-* Mikro: `{|>}{Hallo Welt}`
+1. Inline formulas: `$ ... $` --> $ f(a,b,c) = (a^2+b^2+c^2)^3 $
+2. Block formulas: `$$ ... $$`
 
-Sie können hier ebenfalls unterschiedliche Stimmen verwenden und diese Elemente auch wie Animationen ein und ausblenden.
+   $$
+      \sum_{i=1}^\infty\frac{1}{n^2}
+           =\frac{\pi^2}{6}
+   $$
 
-> **Aufgabe:** Spielen Sie mit ein paar Einstellungen und lassen Sie sich kleine Textstellen vorlesen, bzw. kombinieren Sie diese mit Animationen.
+#### Interactive formulas
+<!--
+@formula: <script>console.html(`<lia-formula formula="@'input" displayMode="true"></lia-formula>`);"LIA: stop"</script>
 
+-->
 
+Center by using `=`
 
-#### Styling
+``` latex
+\begin{split}
+  a &=b+c \\
+    &=e+f \\
+    &=g+h+i+j\\
+a+b+&c+d=12\\
+\end{split}
+```
+@formula
 
-<!-- style="color: red; width: 45%; font-size: 24px; float: left" -->
-Bilder, Videos, ja selbst Tabellen und Verweise, im Grunde alles kann noch nachträglich mit den Mitteln von HTML bearbeitet werden. Wenn Sie einen HTML-Kommentar einem Markdown Block voranstellen dann gelten die Definition für den gesamten Block, hängen Sie es an, dann gilt es nur für **das eine Element**<!-- style="color: green" -->. Dies eignet sich vor allem für Bilder um variable Breiten und Höhen zu definieren, egal wie groß der Bildschirm ist.
+Add numbering to formulas
 
+``` latex
+\tag{33}
+\begin{equation}
+ a =b+c
+\end{equation}
+```
+@formula
 
+Definition of a matrix and use some HTML.
 
-![Markdown Bild](https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)<!-- style="float: right; width: 45%; padding-top: 25px" -->
-
-
-<!-- style="float: left; width: 100%; text-align: center" -->
-Weitere Informationen zu CSS-Styling und HTML-Attributen finden Sie unter: https://www.w3schools.com/Css/
-
+``` latex
+\begin{Bmatrix}
+   a & b & c & d & e & f \\
+   g & h & i & j & k & l \\
+   m & n & o & p & q & r \\
+   s & t & u & v & w & x \\
+   y & z & ä & ö & ü &
+   \htmlStyle{color: red; font-size: 26px}{ß}
+\end{Bmatrix}
+\\
+\href{https://katex.org/docs/supported.html#html}{\KaTeX HTML support}
+\\
+\includegraphics[height=0.8em, totalheight=0.9em, width=0.9em, alt=KA logo]{https://katex.org/img/khan-academy.png}
+```
+@formula
 
 ### ASCII-Art
 
-In LiaScript existiert die Möglichkeit mit dem ASCII-Zeichensatz, sprich nur mit den Zeichen der Tastatur (oder einem erweiterten Zeichensatz) schnell Bilder und Skizzen zu malen, ohne das ein zusätzliches „externes“ Tool genutzt werden muss.
+In LiaScript there are two ways of drawing with ASCII-characters.
+These are either diagrams or simple sketches.
+The benefit is, that you do not have to switch to another external tool and everyone can add elements and pieces.
 
-**Diagramme:**
+**Diagrams**
 
-Zum einen können mit einem stilisiertem Diagramm schnell Kurvenverläufe oder Messpunkte dargestellt werden. Die Farben und Symbole werden durch die verwendete Zeichen definiert. Mit `B B B B B` kann z. B. eine blaue Linie mit großen Punkten gezeichnet werden.
+Characters represent colors, upper and lowercase defines the size of the line.
 
 
                  Combining dots and polylines
     1.9 |
         |     DOTS
       y |                                    *
-      - |
-      a |                         *
+      - |                              
+      a |                        *
       x |                  *
-      i |         *
-      s |
+      i |            *
+      s |      *
         |*
      -1 +------------------------------------
         0            x-axis                 1
 
-> **Aufgabe:** Zeichnen Sie im oberen Diagramm zum Beispiel mit kleinen r’s und mit großen R’s je eine Linie und klicken Sie dann auf das „store“ Symbol um ihr Bild zu speichern.
-
+> **Task:** Add a blue line or curve with `B`s or `b`s, what is the difference?
 
 **Real ASCII-ART:**
 
-Ein Markdown Code-Block wird mit dem Code-Wort `ASCII` markiert, damit der Inhalt als Bild dargestellt wird:
+A markdown code-block which is marked with `ASCII`, is used to define an image:
 
 ``` ascii
          +-------------+       .--------------.
- +------#|    Box 1    |------*|    Box 2     +-------.
+ +------#|    Box 1    |------*|     Box 2    +-------.
   \      +-------------+       '-o------------'       |
    \                            /                     |
     ^                          /                ______|______
-     \                        v                |      V      |
-      +--- ein ---<--- Kreislauf ---O----------|    Box 3    |
+     \                        v                |      v      |
+      +-----------<--- a circle ----O----------|    Box 3    |
                                                |_____________|
 ```
 
-Wenn es für Sie interessant ist, dann können Sie unter dem folgenden Link noch weitere Möglichkeiten/Inspirationen sehen:
+For more information and inspiration, checkout the following link:
 
 https://github.com/andre-dietrich/elm-svgbob
 
-### Tabellen
+### Formating
 
-Markdown-Tabellen können auch als Datensätze wie in Excel interpretiert werden und direkt als Diagramme dargestellt werden. In LiaScript wird automatisch, anhand der Struktur der Daten, versucht eine geeignete Darstellung zu identifizieren. Im besten Fall müssen Sie nichts tun und die entsprechende Visualisierung wird gewählt, ansonsten können Sie auch selber definieren, welche Darstellungsform gewählt werden soll.
+<!-- style="color: red; font-size: 4rem; max-width: 400px" -->
+Blocs<!-- style="background: green" --> and single elements<!-- style="border: 3px dashed blue" --> can be styled differently!
 
+> __Note:__ If a comment is __before__ a block and represents HTML parameters it is used for the entire block.
+> If the comment is __after__ a element, then it is associated with this element only.
+>
+> See also: [W3Schools](https://www.w3schools.com/Css/css_colors.asp)
+
+#### Useful Styles
+
+* Font color:
+  `color: red` or `color: #FF0000` or `color: rgb(1,0,0)`
+* Font size:
+  `font-size: 4rem` or `font-size: 3cm` or `font-size: 20px`
+* Max width and height:
+  `max-height: 300px` `max-width: 300px`
+* Min width and height:
+  `min-height: 300px` `min-width: 300px`
+* Total height and width:
+  `width: 300px` oder `width: 50%` oder `width: 50vw`
+* Borders:
+  `border: 2px solid black` oder `border: 2px dashed black`
+* Spacing:
+  `padding: 3px` oder `padding-top: ..` oder `padding-left`
+  oder `margin: 3px` oder `margin-top: ..` oder `margin-left`
+
+### Fun with Tables
+
+Markdown-tables can also be interpreted as data sets and thus be presented as diagrams, if possible.
+LiaScript tries to analyze the structure of your data in order to identify an optimal visualization.
+Besides, you can also define the visualization you want to use.
 #### Linien-Diagramme
 
 Oberhalb der Tabelle in LiaScript befindet sich ein kleines Diagramm-Symbol, das andeutet, dass Linien-Diagramme für die Darstellung angenommen werden. Wenn Sie darauf klicken, dann wechselt die Darstellung auf das entsprechende Diagramm.
