@@ -15,21 +15,21 @@ import: https://github.com/liascript/CodeRunner
 icon: https://upload.wikimedia.org/wikipedia/commons/d/de/Logo_TU_Bergakademie_Freiberg.svg
 -->
 
-[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://LiaScript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/LiaScript_Tutorial_Kiel/main/C-GitHub_Tutorial.md)
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://LiaScript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/LiaScript_Tutorial_Kigali/main/C-GitHub_Tutorial.md)
 
-# Github-Tutorial
+# Github Introduction
 
-Es wird ernst :-)
+Let's start!
 
-## Warum Versionsmanagement?
+## Version management - Why?
 
                                    {{0-2}}
 ******************************************************************************
 
-Was war das umfangreichste Dokument, an dem Sie bisher gearbeitet haben? Wie haben Sie Ihren Fortschritt organisiert?
+What was the largest document you have worked on so far? How did you organize your progress?
 
-1. Im schlimmsten Fall haben Sie sich gar keine Gedanken gemacht und immer wieder ins gleiche Dokument geschrieben.
-2. Eine Spur besser ist die Idee wöchentlich neue Kopien des Ordners anzulegen und diese in etwa so zu benennen:
+1. in the worst case you didn't think about it at all and wrote into the same document over and over again.
+2. a touch better is the idea of making new copies of the folder weekly and naming them something like this:
 
 ```console
 ▶ ls
@@ -40,7 +40,7 @@ myProject_Moms_corrections
 ...
 ```
 
-3. Wenn Sie "einen Plan hatte", haben Sie täglich eine Kopie aller Dateien in einem Ordner angelegt und diese systematisch benannt.
+3. If you "had a plan", you made a copy of all files in a folder every day and named them systematically.
 
 ```console
 ▶ ls
@@ -50,212 +50,70 @@ myProject_03042021
 ...
 ```
 
-In den Ordnern gab es dann aber wieder das gleiche Durcheinander wie in (2), weil Sie bestimmte Texte gern kurzfristig sichern wollten. Teilweise haben sie diese dann gelöscht bevor die Kopie erstellt wurde, meistens aber einfach in einem `sonstiges` Ordner belassen.
-
 ******************************************************************************
 
 
                           {{1-2}}
 ******************************************************************************
 
-Überlegen Sie sich kurz, wie Sie vorgehen müssen, um Antworten auf die folgenden Fragen zu finden:
+Briefly consider how to find answers to the following questions:
 
-* "Wann wurde der letzte Stand der Datei x.y gelöscht?"
-* "In welcher Version habe ich die Anpassung der Überschriften vorgenommen?"
-* "Wie kann ich dies trotz anderer zwischenzeitlicher Änderungen rückgängig machen?"
-* "Warum habe ich davon keine Kopie gemacht?"
+* "When was the last state of file x.y deleted?"
+* "In which version did I make the adjustment to the headings?"
+* "How can I undo this despite other changes made in the meantime?"
+* "Why didn't I make a copy of this?"
 * "..."
 
-In jedem Fall viel manuelle Arbeit ...
+In any case, a lot of manual work ...
 
 ******************************************************************************
 
                           {{2-3}}
 ******************************************************************************
 
-Und nun übertragen wir den Ansatz auf eine Softwareentwicklungsprojekt mit vielen Mitstreitern. Die Herausforderungen potenzieren sich.
-
-1. Die Erstellung der Tageskopie müsste synchron erfolgen.
-2. Ich muss in die Ordner schauen, um zu sehen welche Anpassungen vorgenommen wurden.
-3. Ich weiß nicht welche die aktuelle Version einer Datei ist.
-4. Es existieren plötzlich mehrere Varianten einer Datei mit Änderungen an unterschiedlichen Codezeilen.
-5. Ich kann den Code nicht kompilieren, weil einzelne Dateien fehlen.
-6. Ich kann eine ältere Version der Software nicht finden - "Gestern hat es noch funktioniert".
-7. Meine Änderungen wurden von einem Mitstreiter einfach überschrieben.
+> In software development, this problem is solved by version management systems. We want to apply the existing methods for this to OER.
 
 ******************************************************************************
 
-## Lösungsansatz
+## Version management
 
-> Definition: Eine Versionsverwaltung ist ein System, das zur Erfassung von Änderungen an Dokumenten oder Dateien verwendet wird. Alle Versionen werden in einem Archiv mit Zeitstempel und Benutzerkennung gesichert und können später wiederhergestellt werden. Versionsverwaltungssysteme werden typischerweise in der Softwareentwicklung eingesetzt, um Quelltexte zu verwalten.
-
-Beispiel - Versionsmanagementsystem von Wikipedia
-
-![Wikipedia Historie](images/VersionenVonVersionsverwaltung.png "Versionen des Artikels Versionsverwaltung auf der Webseite Wikipedia")
+> Definition: A version management is a system used to record changes to documents or files. All versions are saved in an archive with a time stamp and user ID and can be restored later. Version management systems are typically used in software development to manage source code.
 
                                 {{1-2}}
 ******************************************************************************
 
-Hauptaufgaben:
+Example - Wikipedia version management system
 
-+ Protokollierungen der Änderungen: Es kann jederzeit nachvollzogen werden, wer wann was geändert hat.
-+ Wiederherstellung von alten Ständen einzelner Dateien: Somit können versehentliche Änderungen jederzeit wieder rückgängig gemacht werden.
-+ Archivierung der einzelnen Stände eines Projektes: Dadurch ist es jederzeit möglich, auf alle Versionen zuzugreifen.
-+ Koordinierung des gemeinsamen Zugriffs von mehreren Entwicklern auf die Dateien.
-+ Gleichzeitige Entwicklung mehrerer Entwicklungszweige (engl. Branch) eines Projektes, was nicht mit der Abspaltung eines anderen Projekts (engl. Fork) verwechselt werden darf.
+![Wikipedia History](images/VersionenVonVersionsverwaltung.png "Versions of the article version management on the Wikipedia website")
+
+Features:
+
++ Logging of changes: It can be traced at any time who changed what and when.
++ Restoration of old states of individual files: Thus, accidental changes can be undone at any time.
++ Archiving of individual statuses of a project: This makes it possible to access all versions at any time.
++ Coordination of shared access to files by several developers.
++ Simultaneous development of several development branches of a project, which must not be confused with the fork of another project.
 
 ******************************************************************************
 
-### Identifikation von Unterschieden
+## Git 
 
-Zunächst einmal müssen wir feststellen an welchen Stellen es überhaupt Unterschiede
-gibt. Welche Differenzen sehen Sie zwischen den beiden Dokumenten:
+The development history of git is connected to the Linux kernel with tousands of contributors   
 
-```markdown                      DokumentV1.md
-TU
-Bergakademie
-Freiberg
-Softwareentwicklung
-Online Course
-Sommersemester 2020
-Lorem ipsum dolor sit amet, CONSETETUR sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-```
-
-```markdown                      DokumentV2.md
-
-
-
-TU
-Bergakademie
-Freiberg
-Softwareentwicklung
-Sommersemester 2019
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-```
-
-Offenbar wurden sowohl Lehrzeichen, als auch neue Zeilen eingeführt. In anderen Zeilen wurden Inhalte angepasst.
-
-Nutzen wir das Tool `diff` um diese Änderungen automatisiert festzustellen. Die Zeilen, die mit `>` beginnen, sind nur in der ersten Datei vorhanden, diejenigen, die mit `<`, markieren das Vorkomen in der zweiten Datei. Die einzelnen Blöcke werden durch sogenannte change commands („Änderungsbefehle“) getrennt, die angeben, welche Aktion (Zeilen hinzufügen – a, ändern – c oder entfernen – d) in welchen Zeilen ausgeführt wurde.
-
-```console
-▶diff DokumentV1.md DokumentV2.md
-0a1,3
->
->
->
-5,7c8,9
-< Online Course
-< Sommersemester 2020
-< Lorem ipsum dolor sit amet, CONSETETUR sadipscing elitr, ...
----
-> Sommersemester 2019
-> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, ...
-```
-
-> **Merke**: Sehr lange Zeilen erschweren die Suche nach wirklichen Änderungen!
-
-###  Merge von Versionen
-
-Optimistische Versionsverwaltungen (*Copy Modify Merge*) versuchen die die Schwächen der pessimistischen Versionsverwaltung zu beheben, in dem sie gleichzeitige Änderungen durch mehrere Benutzer an einer Datei zu lassen und anschließend diese Änderungen automatisch oder manuell zusammen führen (Merge).
-
-<!--
-style="width: 100%; max-width: 560px; display: block; margin-left: auto; margin-right: auto;"
--->
-```ascii
-+----------------------------+---------------------------+
-|        Repository          |       Repository          |
-|        +-------+           |       +-------+           |
-|        |   A   |           |       |   A   |           |
-|        +-------+           |       +-------+           |
-|         /     \            |                           |
-|    read/       \read       |                           |
-|       /         \          |                           |
-|      v           v         |                           |
-| +-------+    +-------+     | +-------+   +-------+     |
-| |   A   |    |   A   |     | |   A'  |   |  A''  |     |
-| +-------+    +-------+     | +-------+   +-------+     |
-|   Harry        Sally       |   Harry       Sally       |
-|                            |                           |
-| Erzeugen der lokalen Kopie | Barbeitung                |
-+----------------------------+---------------------------+
-|        Repository          |       Repository          |
-|        +-------+           |       +-------+           |
-|        |  A''  |           |       |  A''  |           |
-|        +-------+           |       +-------+           |
-|              ^             |         X                 |
-|               \write       |   write/                  |
-|                \           |       /                   |
-|                 \          |      /                    |
-| +-------+    +-------+     | +-------+   +-------+     |
-| |   A'  |    |  A''  |     | |   A'  |   |  A''  |     |
-| +-------+    +-------+     | +-------+   +-------+     |
-|   Harry        Sally       |   Harry       Sally       |
-|                            |                           |
-|Sally schreibt ihre Version |Harries Schreibversuch wird|
-|                            |blockiert                  |
-+----------------------------+---------------------------+
-|        Repository          |       Repository          |
-|        +-------+           |       +-------+           |
-|        |  A''  |           |       |  A''  |           |
-|        +-------+           |       +-------+           |
-|         /                  |                           |
-|    read/                   |                           |
-|       /                    |                           |
-|      v                     |                           |
-| +-------+    +-------+     | +-------+   +-------+     |
-| | A',A''|    |  A''  |     | |   A*  |   |  A''  |     |
-| +-------+    +-------+     | +-------+   +-------+     |
-|   Harry        Sally       |   Harry       Sally       |
-|                            |                           |
-| Mergen der Kopien          | merge(A',A'')=A*          |
-+----------------------------+---------------------------+
-|        Repository          |       Repository          |
-|        +-------+           |       +-------+           |
-|        |   A*  |           |       |   A*  |           |
-|        +-------+           |       +-------+           |
-|         ^                  |              \            |
-|   write/                   |               \read       |
-|       /                    |                \          |
-|      /                     |                 v         |
-| +-------+    +-------+     | +-------+   +-------+     |
-| |   A*  |    |  A''  |     | |   A*  |   |   A*  |     |
-| +-------+    +-------+     | +-------+   +-------+     |
-|   Harry        Sally       |   Harry       Sally       |
-|                            |                           |
-|Harry schreibt seine Version|Sally übermittelt A''      |
-+----------------------------+---------------------------+                     .
-```
-
-Welche Konsequenzen ergeben sich daraus?
-
-+ Unser Dokument muss überhaupt kombinierbar sein! Auf ein binäres Format ließe sich das Konzept nicht anwenden!
-+ Das Dokument liegt in zeitgleich in n-Versionen vor, die ggf. überlappende Änderungen umfassen.
-+ Das zentrale Repository kennt die Version von Harry nur indirekt. Man kann zwar indirekt aus A'' und A* auf A' schließen, man verliert aber zum Beispiel die Information wann Harry seine Änderungen eingebaut hat.
-
-> Die Herausforderung liegt somit im Mischen von Dokumenten!
-
-[^Subversion]: Brian W. Fitzpatrick, Ben Collins-Sussman, C. Michael Pilato, Version Control with Subversion, 2nd Edition, O'Reilly Media
-
-## Git
-
-**Geschichte und Einsatz**
-
-Die Entwicklungsgeschichte von git ist mit der des Linux Kernels verbunden:
-
-| Jahr | Methode der Versionsverwaltungen                               |
+| year | method of version control                        |
 | ---- | -------------------------------------------------------------- |
-| 1991 | Änderungen am Linux Kernel via patches und archive files       |
-| 2002 | Linux Kernel mit dem Tool BitKeeper verwaltet                  |
-| 2005 | Bruch zwischen der vertreibenden Firma und der Linux Community |
-| 2021 | Die aktuelle Version ist 2.31.1                                |
+| 1991 | Changes to the Linux kernel via patches and archive files |
+| 2002 | Linux kernel managed with the BitKeeper tool |
+| 2005 | Break between the distributing company and the Linux community |
+| 2021 | The current version is 2.31.1 |
 
-2005 wurde einen Anforderungsliste für eine Neuentwicklung definiert. Dabei wurde hervorgehoben, dass sie insbesondere sehr große Projekte (Zahl der Entwickler, Features und Codezeilen, Dateien) unterstützen können muss. Daraus entstand `Git` als freie Software zur verteilten Versionsverwaltung von Dateien.
+In 2005 a list of requirements for a new development was defined. It was emphasized that it must be able to support especially very large projects (number of developers, features and lines of code, files). From this `Git` was developed as free software for distributed version management of files.
 
-> Git dominiert entweder als einzelne Installation oder aber eingebettet in verschiedene Entwicklungsplattform die Softwareentwicklung!
+> Git dominates software development either as a single installation or embedded in various development platforms!
 
-### Zustandsmodell einer Datei in Git
+### State model of a file in Git
 
-Dateien können unterschiedliche Zustände haben, mit denen sie in Git-Repositories markiert sind.
+Files can have different states with which they are marked in Git repositories.
 
                        {{0-1}}
 ********************************************************************************
@@ -263,43 +121,39 @@ Dateien können unterschiedliche Zustände haben, mit denen sie in Git-Repositor
 ```text @plantUML.png
 @startuml
 hide empty description
-[*] --> Untracked : Erzeugen einer Datei
-Untracked --> Staged : Hinzufügen zum Repository
-Unmodified --> Modified : Editierung der Datei
-Modified --> Staged : Markiert als neue Version
-Staged --> Unmodified : Bestätigt als neue Version
-Unmodified --> Untracked : Löschen aus dem Repository
+[*] --> Untracked : Generation of a file
+Untracked --> Staged : Added to repository
+Unmodified --> Modified : Adaptations
+Modified --> Staged : Attributed as a new version
+Staged --> Unmodified : Accepted 
+Unmodified --> Untracked : Deleted from repository
 @enduml
 ```
 
 ********************************************************************************
 
-### Grundlegende Anwendung
+### Basic usage
 
-> **Merke:** Anders als bei svn können Sie mit git eine völlig autonome Versionierung auf Ihrem Rechner realisieren. Ein Server ist dazu *zunächst* nicht nötig.
-
-Aus dem Zustandmodell einer Datei ergeben sich drei Ebenen auf der wir eine Datei in Git Perspektivisch einordnen können - Arbeitsverzeichis, Stage und Repository.
-
-> **Achtung:** Die folgende Darstellung dient hauptsächlich der didaktischen Hinführung zum Thema!
+The state model of a file results in three levels on which we can classify a file in Git perspective - working directory, stage and repository.
 
 ```ascii
-                     lokal                           remote
+                     local                           remote
   ---------------------------------------------  --------------
-  Arbeitskopie     "Staging"        Lokales          Remote
-                                   Repository      Repository
+  Working         "Staging"        local          remote
+  copy                             repository     repository
                        |               |
                        |               |
                        |               |
        +-+- - - - - - -|- - - - - - - -|
-       | | Änderungen  |               |
+       | | Adaptations |               |
        | |             |               |
        +-+             |               |
         |   git add    |               |
         |------------->|  git commit   |
         |              |-------------->|
        +-+             |               |
-       | | weitere     |               |
-       | | Änderungen  |               |
+       | | further     |               |
+       | | Adaptations |               |
        +-+             |               |
         |   git add    |               |
         +------------->|  git commit   |
@@ -309,7 +163,7 @@ Aus dem Zustandmodell einer Datei ergeben sich drei Ebenen auf der wir eine Date
 
 
 
-###  Verteiltes Versionsmanagement
+###  Distributed version mamangement
 
 <!--
 style="width: 100%; max-width: 560px; display: block; margin-left: auto; margin-right: auto;"
@@ -419,42 +273,4 @@ SoSe2020dev    O->O---->O---->O->O---->O-->O->O      ....
 
 Ein Branch in Git ist einfach ein Zeiger auf einen Commit zeigt. Der zentrale Branch wird zumeist als `master` (alte Bezeichnung) oder `main` (neue Bezeichnung) bezeichnet.
 
-
-## Ein Wort zur Zusammenarbeit
-
-Bitte haben Sie immer den spezifischen Kontext Ihres Projektes vor Augen. Üblicherweise legt man am Anfang, bei einem "kleinen Hack" keinen Wert auf formelle Abläufe und Stukturen. Diese sind
-aber in großen Projekten unablässig.
-
-
-![TensorflowOnGithub](images/ScreenshotTensorflow.png)<!-- width="100%" -->
-
-```
-Kurze (72 Zeichen oder weniger) Zusammenfassung
-
-Ausführlicherer erklärender Text. Umfassen Sie ihn auf 72 Zeichen. Die Leerzeile
-Zeile, die die Zusammenfassung vom Textkörper trennt, ist entscheidend (es sei
-denn, Sie lassen den den Textkörper ganz weg).
-
-Schreiben Sie Ihre Commit-Nachricht im Imperativ: "Fix bug" und nicht "Fixed
-Fehler" oder "Behebt Fehler". Diese Konvention stimmt mit den Commit-Nachrichten
-überein die von Befehlen wie "git merge" und "git revert" erzeugt werden.
-
-Weitere Absätze kommen nach Leerzeilen.
-
-- Aufzählungspunkte sind für eine Liste von Anpassungen in Ordnung.
-- ... und noch einer
-```
-Folgende Regeln sollte man für die Beschreibung eines Commits berücksichtigen:
-
-+ Trennen Sie den Betreff durch eine Leerzeile vom folgenden Text
-+ Beschränkt Sie sich bei der Betreffzeile auf maximal 50 Zeichen
-+ Beginnen Sie die Betreffzeile mit einem Großbuchstaben
-+ Schreiben Sie die Betreffzeile im Imperativ
-+ Brechen Sie den Text der Message 72 Zeichen um
-
-
-> **Merke:** Beschreiben Sie in der Commit-Nachricht das was und warum, aber nicht das wie.
-
-## Los geht's
-
-![TensorflowOnGithub](images/GitHub_Screenshot.png)<!-- width="100%" -->
+## GitHub

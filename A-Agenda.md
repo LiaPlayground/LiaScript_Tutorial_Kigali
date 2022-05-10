@@ -84,35 +84,34 @@ The event is structured in two major learning goals basics of LiaScript and the 
 s
 <!-- style="display: block; margin-left: auto; margin-right: auto; max-width: 815px;" -->
 ```ascii
-
-                                  .-.
-                                 ( A ) Agenda and warm up
-                                  '-'  
-                                   |
-                                   |
-                                   v
-                                  .-.
-                                 ( B ) Visionen and Challenges when using Open
-                                  '-'     Educational Ressoures (OER)
-                                /     \
-              Solutions I      /       \    Solutions II
-              collaboration   v         v   interactive content
-                             .-.       .-.
-           Introduction to  ( C )     ( D )  Introduction to
-           Git/Github        '-'       '-'   LiaScript
-                               \       /
-                                \     /
-                                 v   v
-                                  .-.
-                                 ( 3 )  Collaborative generation of OER
-                                  '-'   based on LiaScript
-                                   |
-                                   v
-                                  .-.
-                                 ( 4 )  Export and integration
-                                  '-'   of LiaScript contents
-                                   |
-                                   v
+                        .-.
+                       ( A ) Agenda and warm up
+                        '-'  
+                         |
+                         |
+                         v
+                        .-.
+                       ( B ) Visionen and Challenges when using Open
+                        '-'     Educational Ressoures (OER)
+                      /     \
+    Solutions I      /       \    Solutions II
+    collaboration   v         v   interactive content
+                   .-.       .-.
+ Introduction to  ( C )     ( D )  Introduction to
+ Git/Github        '-'       '-'   LiaScript
+                     \       /
+                      \     /
+                       v   v
+                        .-.
+                       ( 3 )  Collaborative generation of OER
+                        '-'   based on LiaScript
+                         |
+                         v
+                        .-.
+                       ( 4 )  Export and integration
+                        '-'   of LiaScript contents
+                         |
+                         v
 
 ```
 
