@@ -75,12 +75,13 @@ __Dr. André Dietrich__
 | 10.00 – 10.45 | Concepts of Git/Github                                  |
 | 10.45 – 11.15 | Coffee break                                            |
 | 11.15 – 12.30 | Markdown Basics                                         |
+| 12.30 – 13.30 | Lunch                                                   |
 | 13.30 – 15.00 | LiaScript Features and Exercises                        |
 | 15.00 – 15.30 | Coffee break                                            |
 | 15.30 – 16.30 | Integration of LiaScript in learning management systems |
 
-Die Veranstaltung teilt sich in einen Motivationsblock (A-B) und einen Tutorial, dass Ihre praktische Beteiligung einbezieht.
-
+The event is structured in two major learning goals basics of LiaScript and the usage of version control systems.
+s
 <!-- style="display: block; margin-left: auto; margin-right: auto; max-width: 815px;" -->
 ```ascii
 
