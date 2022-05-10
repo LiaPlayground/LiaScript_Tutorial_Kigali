@@ -20,47 +20,45 @@ logo:     ./images/logo.png
 
 [![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://LiaScript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/LiaScript_Tutorial_Kiel/main/A-Agenda.md)
 
-# LiaScript Tutorial an der CAU zu Kiel
+# LiaScript Tutorial at eLearning Africa 2022
 
 ![LiaScriptLogo](images/logo.png)<!-- style="width: 55%; max-width: 1000px" -->
 
-Kiel, 5. Mai 2022
+Kigali, Mai 2022
 
 ----------------------------------
 
 Sebastian Zug, André Dietrich (TU Bergakademie Freiberg)
 
-Britta Petersen (Christian-Albrechts-Universität zu Kiel)
+## Who we are?
 
-## Wer sind wir?
+__Prof. Dr. Sebastian Zug__: Chair of Software development and robotics
 
-__Prof. Dr. Sebastian Zug__: Leiter des Lehrstuhls für Softwareentwicklung und Robotik
+- Robotic
 
-- Robotik
-
-  + Kartensysteme für Outdoorroboter
-  + Aquatische Robotiksysteme
+  + Maps and environment representations for outdoor robots
+  + Aquatic robotic applications
 
 - eLearning
 
-  + Remote Labore
-  + Metriken für erfolgreiche Studentische Teamarbeit in der Informatiklehre
+  + Remote Laboratory
+  + Metrics for student teamwork in computer science courses
   + _LiaScript_
 
 __Dr. André Dietrich__
 
-- hat mal Robotik gemacht ...
-- Programmiersprachen und -paradigmen
+- worked on robots long too time ago  ...
+- Programming languages and -paradigms
 - eLearning
 
   - LiaScript
-  - Remote Labore
+  - Remote Laboratories
 
 
-> Die Vorstellung der Teilnehmer erfolgt gleich im Rahmen einer Übung.
+> The introduction of all participants follows in some minutes as a first exercise ....
 
 
-## Projekt Motivation
+## LiaScript Project Motivation
 
     {{0}}
 !?[RemoteLab-Video](https://www.youtube.com/watch?v=bICfKRyKTwE "Industrial eLab Demonstration aus Magdeburg")
@@ -69,30 +67,17 @@ __Dr. André Dietrich__
 ![Noka vs Destop](images/nokia.jpeg "LiaScript Klassenraum auf dem Desktop und Feature-Phone.")
 
 
-## Was sind Ihre Erwartungen?
+## What is our agenda?
 
-[https://yopad.eu/p/LiaScriptTutorial_Kiel](https://yopad.eu/p/LiaScriptTutorial_Kiel)
-
-![alt-text](images/Etherpad.png)
-
-
-1. Was ist Ihr Hintergrund?
-2. Welche Erwartungen haben Sie an den Workshop?
-3. Wo würden Sie Ihren Kenntnistand in Bezug auf
-     + Git/Github
-     + markdown
-     + Webentwicklungen (html, javascript)
-  mit einer Note von 1 (Novize) - 5 (Experte) einordnen
-
-{{1-3}}
-> **Reflexion - Inhalt:** Ein breitgefächertes heterogenes Publikum :-)
-
-
-{{2-3}}
-> **Reflexion - Aggregation:** Kollaboratives Bearbeiten eines Dokumentes, so dass jeweils der letzte Stand sichtbar bleibt.
-
-
-## Was haben wir heute vor?
+| Time slot     | Content                                                 |
+| ------------- | ------------------------------------------------------- |
+| 9.30 – 10.00  | Introduction, Motivation                                |
+| 10.00 – 10.45 | Concepts of Git/Github                                  |
+| 10.45 – 11.15 | Coffee break                                            |
+| 11.15 – 12.30 | Markdown Basics                                         |
+| 13.30 – 15.00 | LiaScript Features and Exercises                        |
+| 15.00 – 15.30 | Coffee break                                            |
+| 15.30 – 16.30 | Integration of LiaScript in learning management systems |
 
 Die Veranstaltung teilt sich in einen Motivationsblock (A-B) und einen Tutorial, dass Ihre praktische Beteiligung einbezieht.
 
@@ -100,40 +85,66 @@ Die Veranstaltung teilt sich in einen Motivationsblock (A-B) und einen Tutorial,
 ```ascii
 
                                   .-.
-                                 ( A ) Beschränkungen existierender Tools
-                                  '-'  zum kollaborativen Schreiben
+                                 ( A ) Agenda and warm up
+                                  '-'  
                                    |
                                    |
                                    v
                                   .-.
-                                 ( B ) Visionen und Herausforderungen von Open
+                                 ( B ) Visionen and Challenges when using Open
                                   '-'     Educational Ressoures (OER)
                                 /     \
-                               /       \
- Lösungsschine Multi-Autoren  v         v   Lösungsschiene Inhalt
+              Solutions I      /       \    Solutions II
+              collaboration   v         v   interactive content
                              .-.       .-.
-           Einfühung in Git ( 1 )     ( 2 ) Einführung in LiaScript
-           Github            '-'       '-'
+           Introduction to  ( C )     ( D )  Introduction to
+           Git/Github        '-'       '-'   LiaScript
                                \       /
                                 \     /
                                  v   v
                                   .-.
-                                 ( 3 )  Kooperative Erzeugung von OER
-                                  '-'   auf der Basis von LiaScript
+                                 ( 3 )  Collaborative generation of OER
+                                  '-'   based on LiaScript
                                    |
                                    v
                                   .-.
-                                 ( 4 )  Export und Integration
-                                  '-'   von LiaScript Inhalten
+                                 ( 4 )  Export and integration
+                                  '-'   of LiaScript contents
                                    |
                                    v
-
-
-
-
-
 
 ```
 
 {{2-3}}
-> **Los geht's**
+> **Let's start!**
+
+## GitHub Account
+
+Please register your self at [github.com](www.github.com).
+
+Afterwards you can find our materials by searching `LiaPlayground` and `LiaScript_Tutorial_Kigali`.
+
+![alt-text](images/ScreenshotTutorialSeite.png)
+
+> **Ready to start? Yes, but we want to know more about you at the beginning ... **
+
+## What about your expectations?
+
+[https://yopad.eu/p/LiaScriptTutorial_Kiel](https://yopad.eu/p/LiaScriptTutorial_Kigali)
+
+![alt-text](images/Etherpad.png)
+
+1. What is your background - Name, affiliation, (teaching-)topic?
+2. What do you expect from this tutorial?
+3. How would you rate your knowledge related to
+     + Git/Github
+     + Markdown
+     + Web development (html, javascript)?
+   Please chose a "1" for novice and "5" for expert!
+
+{{1-3}}
+> **Reflexion - Content:** A broad spectrum of attendees :-)
+
+
+{{2-3}}
+> **Reflexion - Aggregation:** Collaborative writing process of a document - the final version remains visible at the end.
