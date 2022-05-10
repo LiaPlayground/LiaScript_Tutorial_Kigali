@@ -1,5 +1,3 @@
-
-
 # LiaScript Tutorial: eLearing Africa 2022
 
 
