@@ -11,13 +11,10 @@ narrator: Deutsch Male
 
 mode:     Presentation
 
-comment:  Dieser Kurs für in das Projekt LiaScript ein und diskutiert die
-          Vorteile im Kontext der OER Idee.
+comment:  This course discusses the applicability of OER concepts on learning
+          materials designed with LiaScript.
 
 logo:     ./images/logo.png
-
-import: https://raw.githubusercontent.com/LiaTemplates/Rextester/master/README.md
-        https://raw.githubusercontent.com/liaTemplates/processingjs/master/README.md
 
 translation: Deutsch  translations/German.md
 
@@ -25,19 +22,19 @@ translation: Deutsch  translations/German.md
 
 [![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://LiaScript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/LiaScript_Tutorial_Kiel/main/B-OER_Motivation.md)
 
-# A) Visionen und Herausforderungen von Open Educational Ressources (OER)
+# A) Vision and challenges of Open Educational Ressources (OER)
 
 ![OER logo](images/Global_Open_Educational_Resources_Logo.png "OER-Logo - Quelle: Jonathasmello - Eigenes Werk, CC BY 3.0, [https://commons.wikimedia.org/w/index.php?curid=18460156](https://commons.wikimedia.org/w/index.php?curid=18460156)")
 
-Diese Präsentation beschreibt die Vision der _Open Educational Ressources_ mit LiaScript. Der Beitrag wurde im Rahmen eines Tutorials an der CAU zu Kiel am 5. Mai 2022 vorgestellt.
+This presentation illustrates the vision of _Open Educational Ressources_ and its application on LiaScript. The document was used during a tutorial at eLearning Africa on 10th Mai 2022.
 
-_ Der Quellcode kann des Open Source Dokuments ist unter [Link](https://github.com/SebastianZug/WillkommenAufLiaScript/blob/master/eTeach_Talks.md) zu finden._
+_The sources of the presentation can be found at [Link](https://github.com/LiaPlayground/LiaScript_Tutorial_Kigali/blob/main/B-OER_Motivation.md) zu finden._
 
 ------------------------------------------------------
 
 Sebastian Zug, André Dietrich
 
-Fakultät für Mathematik und Informatik
+Faculty of Mathematics and Computer Science
 
 TU Bergakademie Freiberg
 
@@ -45,9 +42,9 @@ TU Bergakademie Freiberg
 
 ------------------------------------------------------
 
-## Ausgangspunkt
+## Starting point
 
-> {0-5}{Lehrende möchten motivierende, interaktive Lehrmaterialien realisieren.}
+> {0-5}{Teachers want to realize motivating, interactive teaching materials.}
 
              {{1-2}}
 ********************************************************************************
@@ -70,10 +67,10 @@ Beispiele:
 
             {{2-5}}
 ********************************************************************************
-- __Lösungsansatz 1__: Ich mache alles selbst
+- __Strategy strategy 1__: I do everything myself
 
-  + Der Lehrende muss sie sich über alle Inhalte selbst Gedanken machen
-  + Der Lehrende muss sich erheblichen technischen Herausforderungen stellen
+  + The teacher has to think about all the content herself/himself
+  + The teacher has to face significant technical challenges
 
 
 ********************************************************************************
@@ -82,21 +79,20 @@ Beispiele:
 {{3-5}}
 ********************************************************************************
 
-- __Lösungsansatz 2__: Ich nutze Materialien anderer Lehrender
+- __Solution strategy 2__: I use materials from other teachers.
 
-    + Die optimale Abstimmung auf meine eigenen didaktischen Ziele fehlt.
+    + The optimal alignment with my own didactic goals is missing.
 
 ********************************************************************************
 
 {{4-5}}
 ********************************************************************************
 
-> Offenbar sind hybride Ansätze - Nutzung und Adaption - erforderlich! Kann man diese Anforderungen weiter konkretisieren?
+> Obviously, hybrid approaches - use and adaptation - are required! Can these requirements be further specified?
 
 ********************************************************************************
 
-## OER als genereller Lösungsansatz?
-
+## OER as a game changer?
 
 >  **Open Courseware / Open Educational Resources** ... teaching, learning and
 > research materials in any medium, digital or otherwise,that reside in the
@@ -111,134 +107,115 @@ Beispiele:
            {{0-1}}
 ********************************************************************************
 
-| Anforderung                  | Bedeutung                                  |
-| ---------------------------- | ------------------------------------------ |
-| `verwahren/vervielfältigen ` | Download, Speicherung und Vervielfältigung |
-| `verwenden`                  | Nutzung im Lernkontext                     |
-| `verarbeiten`                | Umgestaltung und Adaption                  |
-| `vermischen`                 | Kombination und Extraktion                 |
-| `verbreiten`                 | (digitale) Publikation                     |
+| requirement       | meaning                          |
+| ----------------- | -------------------------------- |
+| `storing/copying` | downloading, storing and copying |
+| `use`             | use in learning context          |
+| `process`         | transformation                   |
+| `adapting/mixing` | extraction and combination       |
+| `disseminate`     | (digital) publication            |
 
+*_Definition of OER according to 5V Modell described by Jöran Muuß-Merholz und Jörg Lohrer für [open-educational-ressources](https://open-educational-resources.de)_*
 
-*_5 V-Freiheiten für Offenheit_ von Jöran Muuß-Merholz und Jörg Lohrer für [open-educational-ressources](https://open-educational-resources.de) - Transferstelle für OER*
-
-> _OER können der Auslöser für Innovation und neue Lenrformen des 21. Jahrhunderts sein._
+> _OER can be the trigger for innovation and new forms of learning in the 21st century._
 >
-> -- _Handreichung OER - Der Einstieg in den Umgang mit Open Educational Ressources_, Bericht des Projektes OERsax, 2018
+> -- Translation from _Handreichung OER - Der Einstieg in den Umgang mit Open Educational Ressources_, Bericht des Projektes OERsax, 2018
 
 ********************************************************************************
 
 
-### Ideales OER Material - ein Textdokument
+### Perfect OER Material - a text file
 
 <!--
 style="width: 100%; max-width: 860px; display: block; margin-left: auto; margin-right: auto;"
 -->
 ```ascii
 
-Kurs.txt         Version 1.0          Kurs.txt          Version 1.1
-+--------------------------+          +---------------------------+
-| Kurs  Deutsche Literatur |          | Kurs  Deutsche Literatur  |
-| Autor Peter Muster       | "Fehler" | Autoren Peter Muster      |
-|                          |------>   |         Angelika Maier    |----->
-|~~~~~~~~~~~~~~~~~~~~~~~~~~|          |~~~~~~~~~~~~~~~~~~~~~~~~~~~|
-| Ab 1756 bereiste Goethe  |---.      | Ab 1786 bereiste Goethe   |--.
-| Italien ...              |   |      | Italien ...               |  |
-                               |                                     |    Course.txt       Version 1.1.2
-                               |                                     |    +----------------------------+
-                               |                                     |    | Kurs  German Literature    |
-                               |                                     |    | Autoren Peter Muster       |
-                               |                                     .--> |         Angelika Maier     |
-                               |                                          |         Steve Gray         |
-                               |                                          |~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
-                               |                                          | In 1786 Goethe traveled to |
-                               |                                          | Italy ...                  |
-                               |      Kurs.txt         Version 1.0
-                               |      +---------------------------+
-                               |      | Kurs  Goethes Welt        |
-                               |      | Autoren Peter Muster      |
-                               .-->   |         Angelika Maier    |----->
-                                      |~~~~~~~~~~~~~~~~~~~~~~~~~~~|
-                                      | Während der italienischen |
-                                      | Reise ...                 |
+Version 1.0                           Version 1.1
++---------------------------+          +---------------------------+
+| Course  German Literatur  |          | Course  German Literature |
+| Authors John Muster       | "Error"  | Authors John Muster       |
+|                           |------->  |         Angelika Maier    |----->
+|~~~~~~~~~~~~~~~~~~~~~~~~~~~|          |~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+| In 1756 Goethe visited    |---.      | In 1786 Goethe visited    |--.
+| Italy ...                 |   |      | Italy ...                 |  |
+                                |                                     |
+                                |                                     |    +----------------------------+
+                                |                                     |    | Course  Deutsche Literatur |
+                                |                                     |    | Authors John Muster        |
+                                |                                     .--> |         Angelika Maier     |
+                                |                                          |         Steve Gray         |
+                                |                                          |~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+                                |                                          | 1786 reiste Goethe nach    |
+                                |                                          | Italien ...                |
+                                |       Version 1.0
+                                |      +---------------------------+
+                                |      | Course  Goethe & Schiller |
+                                |      | Authors John Muster       |
+                                .-->   |         Angelika Maier    |----->
+                                       |~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+                                       | The correspondence during |
+                                       | the Italian journey ...   |
 ```
-*Versionen der Lehrinhalte eines Kurses und deren Wiederverwendung in anderen Veranstaltungen*
+*Versions of the teaching content of a course and its reuse in other courses*.
 
 {{0-1}}
 ********************************************************************************
 
-| Anforderung                  | txt |                                                          |
-| ---------------------------- | --- | -------------------------------------------------------- |
-| `verwahren/vervielfältigen ` | ++  | vorteilhaft wegen geringer Größe                         |
-| `verwenden`                  | ++  | analoge / digitale Verteilung an Studieren unkompliziert |
-| `verarbeiten`                | ++  | verarbeitbar ohne zusätzliche Software                   |
-| `vermischen`                 | ++  | einfache Kombination von Textfragmenten per Copy&Paste   |
-| `verbreiten`                 | ++  | gut exportierbar                                         |
+| requirement       | txt |                                                         |
+| ----------------- | --- | ------------------------------------------------------- |
+| `storing/copying` | ++  | advantageous because of small size                      |
+| `use`             | ++  | analog / digital distribution to students uncomplicated |
+| `process`         | ++  | processable without additional software                 |
+| `adapting/mixing` | ++  | simple combination of text fragments via copy&paste     |
+| `disseminate`     | ++  | easily exportable                                       |
 
-> **Moment, ein reines Textdokument ist als OER Inhalt perfekt?**
+> **A pure text file can cover all ideas of OER? Obviously our list of requirements is not complete.**
 
 ********************************************************************************
 
 {{1-2}}
 ********************************************************************************
 
-Die 5V Definition ...
+he 5V definition ...
 
-> _1.  ... fokussiert das Open in OER lässt aber das Education beiseite._
+> _1. ... focuses on the Open in OER but leaves aside the Education._
 >
-> _2. ... ignoriert die Notwendigkeit eines Versionsmanagmentsystemes.
+> _2. ... ignores the need for a version management system.
 >
-> _3. ... berücksichtig die Auffindbarkeit von OER Inhalten nicht._
+> _3. ... does not consider the findability of OER content._
 
-| Anforderung                                           | txt                           |                                                          |
-| ----------------------------------------------------- | ----------------------------- | -------------------------------------------------------- |
-| `verwahren/vervielfältigen `                          | ++                            | vorteilhaft wegen geringer Größe                         |
-| `verwenden`                                           | +                             | analoge / digitale Verteilung an Studieren unkompliziert |
-| `verarbeiten`                                         | ++                            | verarbeitbar ohne zusätzliche Software                   |
-| `vermischen`                                          | ++                            | einfache Kombination von Textfragmenten per Copy&Paste   |
-| `verbreiten`                                          | ++                            | gut exportierbar                                         |
-| <!-- Style="color:green" --> verwalten / versionieren | <!-- Style="color:red" --> ??                           |                                                          |
-| <!-- Style="color:green" -->   motivieren             | <!-- Style="color:red" --> -- | keine zeitgemäßen Formate und interaktiven Inhalte       |
+| requirement                                   | txt                           |                                                         |
+| --------------------------------------------- | ----------------------------- | ------------------------------------------------------- |
+| `storing/copying`                             | ++                            | advantageous because of small size                      |
+| `use`                                         | +                             | analog / digital distribution to students uncomplicated |
+| `process`                                     | ++                            | processable without additional software                 |
+| `adapting/mixing`                             | ++                            | simple combination of text fragments via copy&paste     |
+| `disseminate`                                 | ++                            | easily exportable                                       |
+| <!-- Style="color:green" --> manage / version | <!-- Style="color:red" --> ?? |                                                         |
+| <!-- Style="color:green" --> motivate         | <!-- Style="color:red" --> -- | no contemporary formats and interactive content         |
 
-> __Offensichtlich brauchen wir Formate, die neben den positiven Aspekten von Textdarstellungen auch das erweiterte Set von Anforderungen abdecken.__
+> __Obviously, we need formats that cover the extended set of requirements in addition to the positive aspects of text representations.__
 
 ********************************************************************************
 
-### Vergleich mit Wikipedia
+### Comparison with Wikipedia
 
-> Kann Wikipedia für OER Pate stehen?
+> Can Wikipedia be the inspiration for OER?
 
-| Aspekt       | Wikipedia - Lösung                                          | Nachteil                                                     |
-| ------------ | ----------------------------------------------------------- | ------------------------------------------------------------ |
-| Suche        | eine Instanz eines Artikels unmittelbar abrufbar      | keine unterschiedlichen Ausprägungen zu einem Thema möglich. |
-| Tools        | integrierter Editor auf der Basis eines Markdown-Dialekts   | starke Beschränkung der Möglichkeiten auf strukturierte Texte, Formeln, Bilder                                                             |
-| Qualität     | ausgefeilte Reviewsystem mit Experten, Versionsdatenerfassung und -vergleich |                                                              |
-| Sichtbarkeit | Autorenschaft in der Versionshistorie sichtbar              |                                                              |
+| Aspect     | Wikipedia - Solution                                                             | Disadvantage                                                             |
+| ---------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| search     | one instance of an article directly retrievable                                  | no different expressions possible for one topic.                         |
+| tools      | integrated editor based on a Markdown dialect                                    | strong limitation of possibilities to structured texts, formulas, images |
+| quality    | sophisticated review system with experts, version data collection and comparison |                                                                          |
+| visibility | authorship visible in version history                                            |                                                                          |
 
-
-### OER in der Realität ... OER in OPAL
+### OER in reality
 
                 {{0-1}}
 ********************************************************************************
 
-Anderen Kursmaterialien zur Verfügung zu stellen, ist in OPAL im Wesentlichen auf 3 Wegen möglich:
-
-+ für ganze Kurse
-
-   - innerhalb der OPAL "Welt" als offene Kurse
-   - über Exportschnittstellen, die die Einbettung in andere LMS ermöglichen
-   - manuelle Übertragung
-
-+ für einzelne Dateien
-
-   - Dateien mit Meta-Informationen und expliziter Angabe
-
-![alt-text](images/OER_in_OPAL.png "Screenshot eines OER Materials im OPAL LMS, 22. März 2022")
-
-********************************************************************************
-
-                    {{1-2}}
-********************************************************************************
+Types of files labeled with "OER" on TU Bergakademie's servers:
 
 <!-- data-type="BarChart"
 data-title="Anteil der Datenformate im Kontext der OPAL OER Materialien"
@@ -258,28 +235,31 @@ data-ylabel="% of Anzahl" -->
 | `xlsx`   | 191    | 0.018036 |
 
 
-Die Materialien im OPAL kommen überwiegend ohne Lizenzen und als geschlossenes Dateiformat daher. Eine Wiederverwendung ist entsprechend nur schwer möglich.
+The materials in OPAL come predominantly without licenses and as closed file format. A reuse is accordingly only with difficulty possible.
 
 ********************************************************************************
 
-### Kritik am OER-Ansatz
-
-| Ebene                               | Kernaussage                                                                             |
-| ----------------------------------- | --------------------------------------------------------------------------------------- |
-| Emotionale Einordnung               | "_Da kann ja jeder meine Arbeit für sich nutzen!_"                                      |
-|                                     | "_Da kann mich ja jeder kontrollieren!_"                                                |
-| Rechtliche Herausforderungen        | "_Ich verwende viele Grafiken, die bei deren Urheberrecht ich mir im besten Fall unsicher bin!_"                                                                                        |
-| Auffindbarkeit                      | "_Ich finde keine Inhalte, die ich in meiner Lehre gewinnbringend integrieren kann!_"   |
-| <!-- Style="color:red" --> Aufwand  | <!-- Style="color:red" --> "_Da muss man ja Informatik studiert haben!_"                |
-| <!-- Style="color:red" -->Abdeckung | <!-- Style="color:red" -->"_Da fehlen mir aber die Schnittstellen für meine Tools XY!_" |
+                 {{1-2}}
+********************************************************************************
 
 
+| Level                               | Core Statement                                                                   |
+| ----------------------------------- | -------------------------------------------------------------------------------- |
+| Emotional classification            | "_Everyone can use my work for themselves!_"                                     |
+|                                     | "_Anyone can control me!_"                                                       |
+| Legal Challenges                    | "_I use a lot of graphics whose copyright I am unsure of at best!_"              |
+| Findability                         | "_I can't find content that I can profitably integrate into my teaching!_"       |
+| <!-- Style="color:red" --> Effort   | <!-- Style="color:red" --> "_You must have studied computer science!_"           |
+| <!-- Style="color:red" --> Coverage | <!-- Style="color:red" --> "_But there are missing interfaces for my tools XY!_" |
 
-## Die LiaScript Vision von OER
 
-> 1. Materialien müssen transformierbar sein, um eine Wiederverwendung zu ermöglichen. (_Verarbeiten/Verwenden/Verbreiten_)
-> 2. Materialien brauchen Metadaten, um auffindbar zu sein. (_Verbreiten_)
-> 3. Materialien brauchen offenkundige Versionierungen (_Verwalten_)
+## LiaScript Vision
+
+OER Materials must ...
+
+> 1. be transformable to enable reuse. (_Process/Use/Disseminate_).
+> 2. contain metadata to be discoverable. (_Disseminate_)
+> 3. embed an systematic version history (_Manage_).
 
 <!--
 style="width: 100%; max-width: 860px; display: block; margin-left: auto; margin-right: auto;"
@@ -300,10 +280,10 @@ style="width: 100%; max-width: 860px; display: block; margin-left: auto; margin-
 |                    |    formation  |              ╚═════════════════════════╝
 +--------------------+               v
                                 .-,(   ),-.                .-----------.
-Lizenz: ...                  .-(           )-.      ╔══════|   LMS  Y  |══════╗
-Inhalt: ...                 (    OER Cloud    )     ║      '-----------'      ║
-Autor: ...                   '-(           )-'  +-->║ Digital Systems 2021    ║
-Versionshistorie: ...           '-.(   ).-'     |   ║                         ║
+License: ...                 .-(           )-.      ╔══════|   LMS  Y  |══════╗
+Content: ...                (    OER Cloud    )     ║      '-----------'      ║
+Author: ...                  '-(           )-'  +-->║ Digital Systems 2021    ║
+Versions: ...                   '-.(   ).-'     |   ║                         ║
                                      |          |
                                      +----------+          .-----------.
                                                 |   ╔══════|  Webapp   |══════╗
@@ -312,51 +292,16 @@ Versionshistorie: ...           '-.(   ).-'     |   ║                         
                                                     ║                         ║
 
 ```
-*Transformation von OER Materialien für die Verwendung in verschiedenen LMS*
+*Transformation of OER materials for use in various LMSs.*
 
 
-### Erfahrungen bei Einsatz von OER
+### Experiences with the use of OER
 
--> Kursüberblick der Arbeitsgruppe _Softwareentwicklung und Robotik_ auf [GitHub](https://github.com/TUBAF-IfI-LiaScript)
+-> Course overview of the _Software Development and Robotics_ working group on [GitHub](https://github.com/TUBAF-IfI-LiaScript).
 
-Ergebnisse:
+Results:
 
-1. Aus der Zusammenarbeit an den Materialien entsteht im Kontext eines Kernteams ein "Wir" Gedanke.
-2. Fehler werden deutlich schneller ausgemerzt als in vergangenen Jahren. Die "kurzfristige" Qualität steigt an.
-3. Die Interaktion zwischen Lehrenden und Studierenden steigert sich - *"Sollte man das nicht besser so erklären ..."*
-4. Das Verständnis über verteilte Entwicklung von Inhalten entwickelt sich sehr positiv, selbst die Nicht-Informatiker beschäftigen sich mit den Methoden.
-
-### OER Forschung
-
-                {{0-1}}
-********************************************************************************
-
-1. Wie lässt sich die Auffindbarkeit der OER Materialien steigern?
-
-> Lösungsansatz: Automatische Extraktion von Metainformationen und Klassifikationsmerkmalen
-
-********************************************************************************
-
-
-                {{1-2}}
-********************************************************************************
-
-2. Welche Qualität haben OER Materialien?
-
-![alt-text](images/DeletedArticlesWikipedia.png "Screenshot der Webseite [https://en.wikipedia.org/wiki/Wikipedia:Deleted_articles_with_freaky_titles](https://en.wikipedia.org/wiki/Wikipedia:Deleted_articles_with_freaky_titles), 22. März 2022")
-
-> Lösungsansatz: Textanalyse und Textsemantikuntersuchungen in OER Materialien
-
-********************************************************************************
-
-
-                {{2-3}}
-********************************************************************************
-
-3. Wie lässt sich die Breite der Materialien steigern?
-
-![alt-text](images/OERSI_screenshot.png "Screenshot der Webseite [https://oersi.de/resources/](https://oersi.de/resources/), 22. März 2022")
-
-> Lösungsansatz: Plugin-Konzept in LiaScript
-
-********************************************************************************
+1. a "we" idea emerges from collaboration on materials in the context of a core team.
+2. bugs are weeded out much faster than in years past. "Short-term" quality increases.
+3. interaction between teachers and students increases - *"Shouldn't we explain it better this way... "*.
+4. the understanding about distributed development develops very positively, even the non-computer science students are able to deal with the methods.
