@@ -3,7 +3,7 @@ author:   Sebastian Zug, André Dietrich
 
 email:    Sebastian.Zug@informatik.tu-freiberg.de
 
-version:  0.0.1
+version:  0.0.2
 
 language: de
 
@@ -130,7 +130,7 @@ Afterwards you can find our materials by searching `LiaPlayground` and `LiaScrip
 
 ## What about your expectations?
 
-[https://yopad.eu/p/LiaScriptTutorial_Kiel](https://yopad.eu/p/LiaScriptTutorial_Kigali)
+[https://yopad.eu/p/LiaScriptTutorial_Kigali](https://yopad.eu/p/LiaScriptTutorial_Kigali)
 
 ![alt-text](images/Etherpad.png)
 
