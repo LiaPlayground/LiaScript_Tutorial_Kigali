@@ -685,6 +685,40 @@ Blocs<!-- style="background: green" --> and single elements<!-- style="border: 3
   `padding: 3px` oder `padding-top: ..` oder `padding-left`
   oder `margin: 3px` oder `margin-top: ..` oder `margin-left`
 
+#### Translation Control
+
+> With the help of `class="translate"` or `class="notranslate"` it is possible to force prohibit the translation of blocks or elements via the experimental "google-translator" integration or any other browser plugin. The translate attribute is for everyone else ;-)
+
+---
+
+**Example:**
+
+```` markdown
+<!-- class="notranslate" translate="no" -->
+All code elements are automatically tagged with the attribute class `notranslate`.
+
+<!-- class="translate" translate="yes" -->
+``` javascript
+console.log("Hello World")
+```
+````
+
+> **Task:** Copy the content from the code-block into your document and watch the results after translation.
+
+##### Example of a Quiz
+
+> This is just an example of a complex quiz, which remains useful in different translations.
+
+Man or woman is obvious, but you guess the remaining German grammatical genders?
+
+    [[male (der<!-- class="notranslate"-->)]   (female [die<!-- class="notranslate"-->])   [neuter (das<!-- class="notranslate"-->)]]
+    [    [X]           [ ]             [ ]     ]  Mann<!-- class="notranslate"--> - German for man
+    [    ( )           (X)             ( )     ]  Frau<!-- class="notranslate"--> - German for woman
+    [    [X]           [ ]             [ ]     ]  Junge<!-- class="notranslate"--> - German for boy
+    [    ( )           ( )             (X)     ]  Mädchen<!-- class="notranslate"--> - German for girl
+    [    [X]           [X]             [ ]     ]  Paprika<!-- class="notranslate"--> - German for bell pepper
+    [    (X)           (X)             (X)     ]  Joghurt<!-- class="notranslate"--> - German for yogurt
+
 ### Fun with Tables
 
 Markdown-tables can also be interpreted as data sets and thus be presented as diagrams, if possible.
