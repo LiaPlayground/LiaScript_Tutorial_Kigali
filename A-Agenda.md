@@ -3,7 +3,7 @@ author:   Sebastian Zug, André Dietrich
 
 email:    Sebastian.Zug@informatik.tu-freiberg.de
 
-version:  0.0.2
+version:  0.0.3
 
 language: de
 
@@ -18,11 +18,11 @@ logo:     ./images/logo.png
 
 -->
 
-[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://LiaScript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/LiaScript_Tutorial_Kiel/main/A-Agenda.md)
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://LiaScript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/LiaScript_Tutorial_Kigali/main/A-Agenda.md)
 
 # LiaScript Tutorial at eLearning Africa 2022
 
-![LiaScriptLogo](images/logo.png)<!-- style="width: 55%; max-width: 1000px" -->
+![LiaScriptLogo](images/logo.png)<!-- style="width: 45%; max-width: 1000px" -->
 
 Kigali, Mai 2022
 
