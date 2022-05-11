@@ -3,7 +3,7 @@ author:   Sebastian Zug, André Dietrich
 
 email:    Sebastian.Zug@informatik.tu-freiberg.de
 
-version:  0.0.1
+version:  0.0.2
 
 language: de
 
@@ -252,6 +252,7 @@ The materials in OPAL come predominantly without licenses and as closed file for
 | <!-- Style="color:red" --> Effort   | <!-- Style="color:red" --> "_You must have studied computer science!_"           |
 | <!-- Style="color:red" --> Coverage | <!-- Style="color:red" --> "_But there are missing interfaces for my tools XY!_" |
 
+********************************************************************************
 
 ## LiaScript Vision
 
