@@ -1,16 +1,11 @@
 <!--
 
-author:   Sebastian Zug, Galina Rudolf, André Dietrich & `JohannaKlinke`
+author:   Sebastian Zug, André Dietrich 
 email:    sebastian.zug@informatik.tu-freiberg.de
-version:  1.0.6
+version:  0.0.2
 
 language: de
 narrator: Deutsch Female
-
-import: https://github.com/liascript/CodeRunner
-        https://raw.githubusercontent.com/liaTemplates/ExplainGit/master/README.md
-        https://raw.githubusercontent.com/liascript-templates/plantUML/master/README.md
-        https://github.com/LiaTemplates/Pyodide
 
 icon: https://upload.wikimedia.org/wikipedia/commons/d/de/Logo_TU_Bergakademie_Freiberg.svg
 -->
@@ -158,9 +153,8 @@ The state model of a file results in three levels on which we can classify a fil
         |   git add    |               |
         +------------->|  git commit   |
                        |-------------->|
-                       |               |                                                 |               |                                       .
+                       |               |                                           .
 ```
-
 
 
 ###  Distributed version mamangement
@@ -169,23 +163,23 @@ The state model of a file results in three levels on which we can classify a fil
 style="width: 100%; max-width: 560px; display: block; margin-left: auto; margin-right: auto;"
 -->
 ```ascii
-                     lokal                           remote
-  ---------------------------------------------  --------------
-  Arbeitskopie     "Staging"        Lokales          Remote
-                                   Repository      Repository
+                      local                           remote
+   ---------------------------------------------  --------------
+   Working         "Staging"        local          remote
+   copy                             repository     repository
                        |               |                 |
                        |               |    git clone    |
                        |               |<----------------|
        +-+- - - - - - -|- - - - - - - -|                 |
-       | | Änderungen  |               |                 |
+       | | Adaptations |               |                 |
        | |             |               |                 |
        +-+             |               |                 |
         |   git add    |               |                 |
         |------------->|  git commit   |                 |
         |              |-------------->|                 |
        +-+             |               |                 |
-       | | weitere     |               |                 |
-       | | Änderungen  |               |                 |
+       | | further     |               |                 |
+       | | Adaptations |               |                 |
        +-+             |               |                 |
         |   git add    |               |                 |
         +------------->|  git commit   |                 |
@@ -195,64 +189,11 @@ style="width: 100%; max-width: 560px; display: block; margin-left: auto; margin-
 ```
 
 
-_Kooperatives Arbeiten:_ Nehmen wir nun an, dass Ihr Kollege in dieser Zeit selbst das Remote Repository fortgeschrieben hat. In diesem Fall bekommen Sie bei Ihrem `push` eine Fehlermeldung, die sie auf die neuere Version hinweist. Nun "ziehen" Sie sich den aktuellen
-Stand in Ihr Repository und kombinieren die Änderungen. Sofern keine Konflikte
-entstehen, wird daraus ein neuer Commit generiert, den Sie dann mit Ihren Anpassungen an das Remote-Repository senden.
-
-<!--
-style="width: 100%; max-width: 560px; display: block; margin-left: auto; margin-right: auto;"
--->
-```ascii
-                     lokal                           remote
-  ---------------------------------------------  --------------
-  Arbeitskopie     "Staging"        Lokales          Remote
-                                   Repository      Repository
-                       |               |                 |
-                       |               |    git clone    |
-                       |               |<----------------|
-       +-+- - - - - - -|- - - - - - - -|                 |
-       | | Änderungen  |               |                 |
-       | |             |               |                 |
-       +-+             |               |                 |
-        |   git add    |               |                 |
-        |------------->|  git commit   |                 |
-        |              |-------------->|                 |
-       +-+             |               |                 |
-       | | weitere     |               |                 |
-       | | Änderungen  |               |                 |   git push
-       +-+             |               |                 |<-------------
-        |   git add    |               |                 |
-        +------------->|  git commit   |                 |
-                       |-------------->|   git push      |
-                       |               |---------------X |
-                       |               |   git fetch     |
-                       |               |<--------------- |     git fetch
-                       |               |   git merge     |   + git merge
-                       |               |<--------------- |   = git pull
-                       |               |   git push      |
-                       |               |---------------->|                   .
-```
-
-
-Versuchen wir das ganze noch mal etwas plastischer nachzuvollziehen. Rechts oben sehen Sie unser Remote-Repository auf dem Server. Im mittleren Bereich den Status unseres lokalen Repositories.
-
-
-``` text @ExplainGit.eval
-create origin
-```
-
 ### Arbeiten mit Branches
 
-Die Organisation von Versionen in unterschiedlichen Branches ist ein zentrales
-Element der Arbeit mit git. Branches sind Verzweigungen des Codes, die bestimmte
-Entwicklungsziele kapseln.
-
-Der größte Nachteil bei der Arbeit mit nur einem Branch liegt darin, dass bei einem
-defekten Master(-Branch) die Arbeit sämtlicher Beteiligter unterbrochen wird. Branches
-schaffen einen eignen (temporären) Raum für die Entwicklung neuer Features, ohne
-die Stabilität des Gesamtsystems zu gefährden. Gleichzeitig haben die Entwickler den gesamten Verlauf eines Projekts in strukturierter Art zur Hand.
-
-Wie sieht das zum Beispiel für die Kursmaterialien der Vorlesung `Softwareentwicklung` aus?
+The organization of versions in different branches is a central element of working with git.
+element of working with git. Branches are branches of code that encapsulate specific development
+development goals.
 
 <!--
 style="width: 100%; max-width: 560px; display: block; margin-left: auto; margin-right: auto;"
@@ -262,15 +203,21 @@ style="width: 100%; max-width: 560px; display: block; margin-left: auto; margin-
         vSoSe2019                                                   vSoSe2020
 main     O-----------------------------------------  ....  ---------O
           \                                                        ^
-           \               Offizielle Versionen                   /
+           \        Current Course Versionen                      /
 SoSe2020    \              O-->O                 O          ---->O
              \            ^     \               /
               v          /       v             /
 SoSe2020dev    O->O---->O---->O->O---->O-->O->O      ....
-               Vorlesung      Vorlesung
+               Lecture      Lecture
                00             01
 ```
 
-Ein Branch in Git ist einfach ein Zeiger auf einen Commit zeigt. Der zentrale Branch wird zumeist als `master` (alte Bezeichnung) oder `main` (neue Bezeichnung) bezeichnet.
+A branch in Git is simply a pointer to a commit. The central branch is usually referred to as `master` (old name) or `main` (new name).
 
 ## GitHub
+
+Github is a platform that offers online Git version management and adds it to a project management. Besides coordinating the versions, they can be linked to tasks, milestones can be checked and certain tasks can be executed automatically.
+
+![alt-text](images/ScreenshotTutorialSeite.png)
+
+> Let's take a closer view and generate your first Github project.

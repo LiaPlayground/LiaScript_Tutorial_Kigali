@@ -3,7 +3,7 @@ author:   Sebastian Zug, André Dietrich
 
 email:    Sebastian.Zug@informatik.tu-freiberg.de
 
-version:  0.0.1
+version:  0.0.3
 
 language: de
 
@@ -24,7 +24,7 @@ translation: Deutsch  translations/German.md
 
 # A) Vision and challenges of Open Educational Ressources (OER)
 
-![OER logo](images/Global_Open_Educational_Resources_Logo.png "OER-Logo - Quelle: Jonathasmello - Eigenes Werk, CC BY 3.0, [https://commons.wikimedia.org/w/index.php?curid=18460156](https://commons.wikimedia.org/w/index.php?curid=18460156)")
+![OER logo](images/Global_Open_Educational_Resources_Logo.png "OER-Logo - Quelle: Jonathasmello - Eigenes Werk, CC BY 3.0, [https://commons.wikimedia.org/w/index.php?curid=18460156](https://commons.wikimedia.org/w/index.php?curid=18460156)")<!-- style="width: 45%; max-width: 1000px" -->
 
 This presentation illustrates the vision of _Open Educational Ressources_ and its application on LiaScript. The document was used during a tutorial at eLearning Africa on 10th Mai 2022.
 
@@ -252,6 +252,7 @@ The materials in OPAL come predominantly without licenses and as closed file for
 | <!-- Style="color:red" --> Effort   | <!-- Style="color:red" --> "_You must have studied computer science!_"           |
 | <!-- Style="color:red" --> Coverage | <!-- Style="color:red" --> "_But there are missing interfaces for my tools XY!_" |
 
+********************************************************************************
 
 ## LiaScript Vision
 
