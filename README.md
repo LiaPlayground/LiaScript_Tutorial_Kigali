@@ -1,9 +1,11 @@
 <!--
-author:   Your Name
+author:   André Dietrich & Sebastian Zug
 
-email:    your@mail.org
+email:    LiaScript@web.de
 
-version:  0.0.1
+logo:     https://www.elearning-africa.com/conference2022/ressources/banner/2022/social_1200_630.png
+
+version:  0.0.2
 
 language: en
 
