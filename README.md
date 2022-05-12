@@ -24,9 +24,11 @@ It is a distributed way of creating and sharing educational content without the 
 
 > This course is hosted freely on [GitHub](https://github.com): https://github.com/LiaPlayground/LiaScript_Tutorial_Kigali
 >
-> and can be shared freely, forked, adapted, translated, etc.
+> ... and can be shared freely, forked, adapted, translated, etc.
 
 This is a hands on tutorial. You can fork this course from [GitHub](https://github.com/LiaPlayground/LiaScript_Tutorial_Kigali) or simply copy the text file directly from the [README.md](https://github.com/LiaPlayground/LiaScript_Tutorial_Kigali/blob/main/README.md) into your editor and start go through it step by step.
+
+---
 
 Where can you find additional resources:
 
@@ -51,6 +53,13 @@ Where can you find additional resources:
 * __Exporter:__ https://www.npmjs.com/package/@liascript/exporter
 
 
+---
+
+How to contact us:
+
+* by eMail: LiaScript@web.de
+* via Twitter: https://twitter.com/LiaScript
+* or via chat: https://gitter.im/LiaScript/community
 
 ## Setup
 
@@ -121,6 +130,12 @@ Where can you find additional resources:
 
 ## Markdown?
 
+> The following parts are created as an interactive tutorial.
+> They will guide you through all details of Markdown at first and then we build on this knowledge and introduce you to LiaScript.
+> Most parts will have a small task for you, please edit and change this document accordingly, experiment with it and make it your own.
+> Maybe this could become a LiaScript tutorial for your people in your language. 
+
+### Philosophy
 
 > ~~__Markdown is intended to be as easy-to-read and easy-to-write as is feasible.__~~
 >
@@ -959,6 +974,9 @@ void loop() {
 ## Classrooms
 
 LiaScript implements some kind of private classrooms for small groups.
+If you view this course via the LiaScript project website and click onto the share-button at the top, you should see a "Classroom" button.
+Select "GUN" as a backend, give your room a name and connect.
+This new URL can then be shared and everyone who opens it and connects, will become a member of your classroom.
 
 Classrooms synchronize quizzes and surveys.
 
@@ -966,32 +984,43 @@ Surveys are basically quizzes without solutions but with options.
 
 ---
 
-What features do you like about LiaScript?
-
-   [[TTS]] The text to speech output
-   [[Animations]] PowerPoint like animations
-   [[Multimedia]] Easy integration of multimedia content
-   [[ASCII]] Drawing with characters
-   [[Coding]] Inline coding
-   [[Openness]] The free sharing
-
-Will you use LiaScript to create courses?
-
-    [(yes)] Yes of course
-    [(no)] No absolutely not
-    [(maybe)] Maybe, don't know atm
-
-Can you give us some reactions, simply add comma separated phrases:
-
-    [[___]]
+> What features do you like about LiaScript?
+>
+>   [[TTS]] The text to speech output
+>   [[Animations]] PowerPoint like animations
+>   [[Multimedia]] Easy integration of multimedia content
+>   [[ASCII]] Drawing with characters
+>   [[Coding]] Inline coding
+>   [[Openness]] The free sharing
 
 ---
 
-Give us some live feedback.
+> Will you use LiaScript to create courses?
+>
+>     [(yes)] Yes of course
+>     [(no)] No absolutely not
+>     [(maybe)] Maybe, don't know atm
 
-    [[___ ___ ___]]
+---
+
+> Can you give us some reactions, simply add comma separated phrases:
+>
+>     [[___]]
+
+---
+
+> Give us some live feedback.
+> 
+>     [[___ ___ ___]]
 
 ## Exporting your course to
+
+* SCORM 1.2
+* SCORM 2004
+* PDF
+* IMS
+* standalone website
+* Android APK
 
 Download and install nodejs and npm:
 
