@@ -13,10 +13,49 @@ comment:  Full day workshop at eLearning Africa 2022.
 
 -->
 
+To see this course in the interactive LiaScript-version, click [here](https://LiaScript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/LiaScript_Tutorial_Kigali/main/README.md).
+
 # LiaScript Tutorial: eLearning Africa 2022
 
 ![LiaScript on Nokia](images/nokia.jpeg)
+
+Hello and welcome, this is an updated version of our interactive hands on course on creating interactive OER online/offline courses with LiaScript.
+It is a distributed way of creating and sharing educational content without the need of a centralized server or backend system.
+
+> This course is hosted freely on [GitHub](https://github.com): https://github.com/LiaPlayground/LiaScript_Tutorial_Kigali
+>
+> and can be shared freely, forked, adapted, translated, etc.
+
+This is a hands on tutorial. You can fork this course from [GitHub](https://github.com/LiaPlayground/LiaScript_Tutorial_Kigali) or simply copy the text file directly from the [README.md](https://github.com/LiaPlayground/LiaScript_Tutorial_Kigali/blob/main/README.md) into your editor and start go through it step by step.
+
+Where can you find additional resources:
+
+* __Project-Website:__ https://LiaScript.github.io
+* __Open-Source:__ https://github.com/liascript
+* __YouTube:__ https://www.youtube.com/channel/UCyiTe2GkW_u05HSdvUblGYg
+* __Additional resources:__
+
+  - Documentation: https://github.com/LiaScript/docs
+  - Free books: https://github.com/LiaBooks
+  - Templates: https://github.com/topics/liascript-template
+  - Courses & ...: https://github.com/topics/liascript-course
+  - Blog: https://aizac.herokuapp.com
+
+* __Editor:__ https://code.visualstudio.com/Download
+
+  - Liascript-Preview: https://marketplace.visualstudio.com/items?itemName=LiaScript.liascript-preview
+  - Liascript-Snippets: https://marketplace.visualstudio.com/items?itemName=LiaScript.liascript-snippets
+
+* __Development-Server:__ https://www.npmjs.com/package/@liascript/devserver
+
+* __Exporter:__ https://www.npmjs.com/package/@liascript/exporter
+
+
+
 ## Setup
+
+> If you just want to develop locally, it is enough to download the editor and install the plugins from the Extensions (Marketplace).
+> Create a README.md and copy the content from [here](https://github.com/LiaPlayground/LiaScript_Tutorial_Kigali/blob/main/README.md)
 
 1. Create an account at: https://github.com
 2. Download the Editor at: https://code.visualstudio.com/Download
@@ -29,10 +68,11 @@ comment:  Full day workshop at eLearning Africa 2022.
 
 > **important keyboard short-cuts**
 >
-> * Fuzzy Search: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>
+> * Fuzzy Search for commands: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>
+> * Open the LiaScript preview: <kbd>Alt</kbd> + <kbd>L</kbd>
 > * Save: <kbd>Shift</kbd> + <kbd>S</kbd>
 > * Move lines: <kbd>Alt</kbd> + <kbd>ᐃ/ᐁ</kbd>
-> * __LiaScript__:
+> * __LiaScript__ snippets:
 >
 >   - Snippets: <kbd>l</kbd> <kbd>i</kbd> <kbd>a</kbd>
 >   - Programming languages: <kbd>h</kbd> <kbd>i</kbd> <kbd>l</kbd> <kbd>i</kbd>
@@ -40,28 +80,43 @@ comment:  Full day workshop at eLearning Africa 2022.
 
 ## Share your course via ...
 
+> You can basically use any kind of webspace to share your course with your audience.
+> Simply replace the `YOUR_COURSE_URL` within the example below with your personal URL of your course URL.
+> 
+> For this course it is: https://raw.githubusercontent.com/LiaPlayground/LiaScript_Tutorial_Kigali/main/README.md
+> 
+> Thus the result looks like this: https://LiaScript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/LiaScript_Tutorial_Kigali/main/README.md
+
+
 **`https://LiaScript.github.io/course/?YOUR_COURSE_URL`**
 
 
     {{1}}
-* [GitHub](https://github.com)
-* [GitLab](https://gitlab.com)
+* Open-source platforms:
+
+  - [GitHub](https://github.com)
+  - [GitLab](https://gitlab.com)
 
     {{2}}
-* [DropBox](https://DropBox.com)
-* [nextCloud](https://nextCloud.com)
+* Private document stores:
+
+  - [DropBox](https://DropBox.com)
+  - [nextCloud](https://nextCloud.com)
 
     {{3}}
-* [Brave Browser](https://brave.com) via [IPFS](https://ipfs.io)
-* [Beaker Browser](https://beakerbrowser.com) via [Hyper](https://hypercore-protocol.org)
+* Peer to Peer browsers and protocols.
 
-  !?[Beaker-Browser demo](https://beakerbrowser.com/beaker-site-demo.mp4)<!-- autoplay="true" -->
+  - [Brave Browser](https://brave.com) via [IPFS](https://ipfs.io)
+  - [Beaker Browser](https://beakerbrowser.com) via [Hyper](https://hypercore-protocol.org)
 
-* [Onion-Share](https://onionshare.org)
+    !?[Beaker-Browser demo](https://beakerbrowser.com/beaker-site-demo.mp4)<!-- autoplay="true" -->
 
     {{4}}
-* free webspace
-* [CodiLia](https://github.com/liaScript/codilia)
+* Anything else and more to come ...
+
+  - [Onion-Share](https://onionshare.org)
+  - free webspace
+  - online editors like [CodiLia](https://github.com/liaScript/codilia)
 
 
 ## Markdown?
@@ -311,7 +366,7 @@ tags:     LiaScript, PowerPoint, Tutorial
 -->
 ```
 
-> **Tasks:** Change meta-information for your course.>
+> **Tasks:** Change meta-information for your course.
 >
 > with the `icon:` command, you can provide your own logo of your institution.
 
@@ -410,13 +465,15 @@ https://responsivevoice.org
 You can use more voices, simply by typing "voice".
 
 
-With this notation `--{{1}}--` you can add some more explanation that will be spoken out loud to animation-step 1. You can also change the voice for per comment `--{{2 US English Male}}--`.
+With this notation `--{{1}}--` you can add some more explanation that will be spoken out loud to animation-step 1.
+You can also change the voice for per comment `--{{2 US English Male}}--`.
 
 > **Task:** Add some comment tags to the head of the paragraphs below and change their voices.
 > 
 > Try to add some examples of your mother tongue.
 
-The entire ***Markdown*** paragraph right below the effect definition in double minus notation is sent to responsivevoice to speak the text out loud. If you click on the ear button at the navigation panel, then this paragraph gets rendered at the place where it is defined.
+The entire ***Markdown*** paragraph right below the effect definition in double minus notation is sent to responsivevoice to speak the text out loud.
+If you click on the ear button at the navigation panel, then this paragraph gets rendered at the place where it is defined.
 
 Der Ganze Satz sollte deutsch ausgesprochen werden!
 
@@ -942,8 +999,8 @@ https://nodejs.org/en/download/
 
 Install the LiaScript exporter via npm in your terminal:
 
-`npm install -g @liascript/devserver`
+`npm install -g --verbose @liascript/exporter`
 
 More information about the usage can be found here:
 
-https://www.npmjs.com/package/@liascript/devserver
+https://www.npmjs.com/package/@liascript/exporter
